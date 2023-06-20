@@ -1,4 +1,4 @@
-## Selected recent projects in data science, machine learning
+## Selected recent projects in machine learning
 ---
 
 ### Predicting Bike Traffic  
