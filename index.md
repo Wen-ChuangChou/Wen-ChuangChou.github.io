@@ -3,16 +3,13 @@
 
 ### Predicting Bike Traffic 
 
-[Project 1 Title](/sample_page)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
-
-
 
 ---
 
 ### Speaker Identification
 
-More details on [Github](https://github.com/Wen-ChuangChou/Speaker-identification)
+
+I utilized the transformer encoder to identify speakers in a dataset of 56,666 voice recordings.  The accuracy rate for correctly identifying speakers is 77.24%. For more details, please refer to my [Github](https://github.com/Wen-ChuangChou/Speaker-identification) repository.
 
 ---
 ### Anime Face Generator
