@@ -2,10 +2,8 @@ title: Wen-Chuang Chou # your name (or website title) here
 logo: "/images/myphoto_goe.jpg?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
   I am an AI scientist with a background in theoretical neuroscience and also interested in human mobility and LLMs in understanding biomolecular data.
-  <br><br>
-  Second description 
-  <br><br>
-  <a href="https://www.linkedin.com/in/example/">View My LinkedIn Profile</a> 
+
+  <a href="https://github.com/Wen-ChuangChou/">View My GitHub</a> 
   
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
