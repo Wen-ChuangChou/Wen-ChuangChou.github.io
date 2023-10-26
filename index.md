@@ -3,7 +3,7 @@
 
 ### Predicting Bike Traffic  
 
-I implemented graph neural networks to predict the volume of bike traffic using features derived from social and environmental data. The data from Dresden, Leipzig, and Hamburg were used individually to train the networks. The following plot illustrates the results obtained from models trained on the three cities:   
+I implemented Graph Neural Networks to predict the volume of bike traffic using features derived from social and environmental data. The data from Dresden, Leipzig, and Hamburg were used individually to train the networks. The following plot illustrates the results obtained from models trained on the three cities:   
 ![prediction](https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/prediction.png?raw=true)  
 The project won the second prize in the data science challenge at BTW 2023. For more details, please refer to my [Github](https://wen-chuangchou.github.io/Predict-Bike-Traffic/) page.
 
