@@ -12,7 +12,7 @@ The project won the second prize in the data science challenge at BTW 2023. For 
 ### Speaker Identification
 
 
-I utilized the conformer encoder to identify speakers in a dataset of 56,666 voice recordings.  The accuracy rate for correctly identifying speakers in validate dataset is 91.8%. For more details, please refer to my [GitHub](https://wen-chuangchou.github.io/Speaker-identification/) page.
+I utilized the conformer encoder to identify speakers in a dataset of 56,666 voice recordings.  The accuracy rate for correctly identifying speakers in the validation dataset is 91.8%. For more details, please refer to my [GitHub](https://wen-chuangchou.github.io/Speaker-identification/) page.
 
 ---
 ### Anime Face Generator
