@@ -6,7 +6,7 @@ I fine-tuned the Llama 3 model for sentiment analysis, improving accuracy from 6
 <p align="center">
   <img src="https://github.com/Wen-ChuangChou/sentiment_analysis/blob/main/pic/radarplot.png?raw=true" alt="radar plot" width="400"/>
 </p>
-
+Have change.
 More details can be found in the project repository on [GitHub](https://github.com/Wen-ChuangChou/sentiment_analysis).  
 
 ---
