@@ -1,29 +1,35 @@
-## Selected recent projects in machine learning
+Here's a polished version of your project descriptions with improved clarity, conciseness, and flow.  
+
+---
+
+## Selected Recent Projects in Machine Learning  
+
+### Sentiment Analysis  
+I fine-tuned the Llama 3 model for sentiment analysis, improving accuracy from 63.41% to 81.49%. This demonstrates the effectiveness of model adaptation for domain-specific NLP tasks. The radar plot below visualizes the enhanced performance across various metrics. More details can be found in the project repository on [GitHub](https://github.com/Wen-ChuangChou/sentiment_analysis).  
+
 ---
 
 ### Predicting Bike Traffic  
-
-I implemented Graph Neural Networks to predict the volume of bike traffic using features derived from social and environmental data. The data from Dresden, Leipzig, and Hamburg were used individually to train the networks. The following plot illustrates the results obtained from models trained on the three cities:   
+I implemented Graph Attention Networks to predict bike traffic volume using social and environmental data. The models were trained separately on datasets from Dresden, Leipzig, and Hamburg. The following plot illustrates the results across the three cities:  
 ![prediction](https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/prediction.png?raw=true)  
-The project won the second prize in the data science challenge at BTW 2023. For more details, please refer to my [Github](https://wen-chuangchou.github.io/Predict-Bike-Traffic/) page.
+
+This project won second place in the data science challenge at BTW 2023. More details are available on [GitHub](https://wen-chuangchou.github.io/Predict-Bike-Traffic/).  
 
 ---
 
-### Sentiment Analysis
+### Speaker Identification  
+I developed a speaker identification system using a conformer encoder, achieving 91.8% accuracy on a validation dataset of 56,666 voice recordings. More details are available on [GitHub](https://wen-chuangchou.github.io/Speaker-identification/).  
 
 ---
 
-### Speaker Identification
+### Anime Face Generator  
+Using a dataset of approximately 71,000 anime face images, I trained a diffusion probabilistic model to generate anime-style portraits. The generative network improved significantly over training iterations, as shown in the images below:  
+After 1,000 iterations (top) vs. 20,000 iterations (bottom):  
+![1000](https://github.com/Wen-ChuangChou/Anime-face-generator/blob/main/doc/fig/1000iterations.png?raw=true)  
+![20000](https://github.com/Wen-ChuangChou/Anime-face-generator/blob/main/doc/fig/20000iterations.png?raw=true)  
 
-
-I utilized the conformer encoder to identify speakers in a dataset of 56,666 voice recordings.  The accuracy rate for correctly identifying speakers in the validation dataset is 91.8%. For more details, please refer to my [GitHub](https://wen-chuangchou.github.io/Speaker-identification/) page.
+More details are available on [GitHub](https://wen-chuangchou.github.io/Anime-face-generator/).  
 
 ---
-### Anime Face Generator
-I used approximately 71,000 samples of anime faces to teach the computer how to draw anime faces in the Japanese style. By implementing a diffusion probabilistic model, I trained generative networks specifically for generating anime faces.  
-Here are some samples of generated anime faces after 1000 (upper) and 20,000 (lower) training iterations, respectively:
-![1000](https://github.com/Wen-ChuangChou/Anime-face-generator/blob/main/doc/fig/1000iterations.png?raw=true)
-![20000](https://github.com/Wen-ChuangChou/Anime-face-generator/blob/main/doc/fig/20000iterations.png?raw=true)
 
-More details on [GitHub](https://wen-chuangchou.github.io/Anime-face-generator/)
-
+Let me know if you'd like any further refinements! 🚀
