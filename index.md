@@ -5,7 +5,11 @@ Here's a polished version of your project descriptions with improved clarity, co
 ## Selected Recent Projects in Machine Learning  
 
 ### Sentiment Analysis  
-I fine-tuned the Llama 3 model for sentiment analysis, improving accuracy from 63.41% to 81.49%. This demonstrates the effectiveness of model adaptation for domain-specific NLP tasks. The radar plot below visualizes the enhanced performance across various metrics. More details can be found in the project repository on [GitHub](https://github.com/Wen-ChuangChou/sentiment_analysis).  
+I fine-tuned the Llama 3 model for sentiment analysis, improving accuracy from 63.41% to 81.49%. This demonstrates the effectiveness of model adaptation for domain-specific NLP tasks. The radar plot below visualizes the enhanced performance across various metrics.
+
+<img src="https://github.com/Wen-ChuangChou/sentiment_analysis/blob/main/pic/radarplot.png" alt="radar plot" width="50%"/>
+
+More details can be found in the project repository on [GitHub](https://github.com/Wen-ChuangChou/sentiment_analysis).  
 
 ---
 
@@ -18,7 +22,7 @@ This project won second place in the data science challenge at BTW 2023. More de
 ---
 
 ### Speaker Identification  
-I developed a speaker identification system using a conformer encoder, achieving 91.8% accuracy on a validation dataset of 56,666 voice recordings. More details are available on [GitHub](https://wen-chuangchou.github.io/Speaker-identification/).  
+I developed a speaker identification system using Transformer and Conformer encoders, improving accuracy from 53.94% to 91.8% on a validation dataset of 56,666 voice recordings. More details are available on [GitHub](https://wen-chuangchou.github.io/Speaker-identification/).
 
 ---
 
