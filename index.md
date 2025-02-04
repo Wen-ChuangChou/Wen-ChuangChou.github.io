@@ -37,7 +37,3 @@ After 1,000 iterations (left) vs. 20,000 iterations (right):
 </p>
 
 More details are available on [GitHub](https://wen-chuangchou.github.io/Anime-face-generator/).  
-
----
-
-Let me know if you'd like any further refinements! 🚀
