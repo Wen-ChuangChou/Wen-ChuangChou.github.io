@@ -32,8 +32,8 @@ Using a dataset of approximately 71,000 anime face images, I trained a diffusion
 
 After 1,000 iterations (left) vs. 20,000 iterations (right):
 <p align="center">
-<img src="https://github.com/Wen-ChuangChou/Anime-face-generator/blob/main/doc/fig/1000iterations.png?raw=true" alt="1000" width="200"/>
- <img src="https://github.com/Wen-ChuangChou/Anime-face-generator/blob/main/doc/fig/20000iterations.png?raw=true" alt="20000" width="200"/> 
+<img src="https://github.com/Wen-ChuangChou/Anime-face-generator/blob/main/doc/fig/1000iterations.png?raw=true" alt="1000" width="250"/>
+ <img src="https://github.com/Wen-ChuangChou/Anime-face-generator/blob/main/doc/fig/20000iterations.png?raw=true" alt="20000" width="250"/> 
 </p>
 
 More details are available on [GitHub](https://wen-chuangchou.github.io/Anime-face-generator/).  
