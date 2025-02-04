@@ -1,7 +1,3 @@
-Here's a polished version of your project descriptions with improved clarity, conciseness, and flow.  
-
----
-
 ## Selected Recent Projects in Machine Learning  
 
 ### Sentiment Analysis  
