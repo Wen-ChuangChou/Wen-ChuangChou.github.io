@@ -29,6 +29,7 @@ I developed a speaker identification system using Transformer and Conformer enco
 
 ### Anime Face Generator  
 Using a dataset of approximately 71,000 anime face images, I trained a diffusion probabilistic model to generate anime-style portraits. The generative network improved significantly over training iterations, as shown in the images below:  
+
 After 1,000 iterations (left) vs. 20,000 iterations (right):
 <p align="center">
 <img src="https://github.com/Wen-ChuangChou/Anime-face-generator/blob/main/doc/fig/1000iterations.png?raw=true" alt="1000" width="200"/>
