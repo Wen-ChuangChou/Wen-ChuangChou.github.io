@@ -18,7 +18,7 @@ I implemented Graph Attention Networks to predict bike traffic volume using soci
 <img src="https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/prediction.png" alt="prediction" width="700"/>
 </p>
 
-This project won second place in the data science challenge at BTW 2023. More details are available on [GitHub](https://wen-chuangchou.github.io/Predict-Bike-Traffic/).  
+This project won **second place** in the data science challenge at BTW 2023. More details are available on [GitHub](https://wen-chuangchou.github.io/Predict-Bike-Traffic/).  
 
 ---
 
