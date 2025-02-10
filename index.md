@@ -1,7 +1,7 @@
 ## Selected Recent Projects in Machine Learning  
 
-### Sentiment Analysis  
-I fine-tuned the Llama 3 model for sentiment analysis, improving accuracy from 63.41% to 81.49%. This demonstrates the effectiveness of model adaptation for domain-specific NLP tasks. The radar plot below visualizes the enhanced performance across various metrics.
+### Sentiment Analysis
+My final model, fine-tuned for sentiment analysis using Llama 3, achieves an accuracy of 81.49%, marking an improvement of over 18% compared to the base model. The radar plot below illustrates the enhanced performance across various metrics.
 
 <p align="center">
   <img src="https://github.com/Wen-ChuangChou/sentiment_analysis/blob/main/pic/radarplot.png?raw=true" alt="radar plot" width="400"/>
