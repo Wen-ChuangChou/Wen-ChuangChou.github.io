@@ -1,7 +1,7 @@
 title: Wen-Chuang Chou # your name (or website title) here
 logo: "/images/myphoto_ovl2.jpg?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  I am interested in AI and have a background in theoretical neuroscience. Additionally, I have a keen interest in human mobility and LLMs.
+  Passionate about AI with roots in theoretical neuroscience, I explore LLMs, generative models, and human mobility—driven by a vision of accessible, everyday AI for all.
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
 - jekyll-remote-theme
