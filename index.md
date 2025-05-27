@@ -1,6 +1,6 @@
 ## Selected Recent Projects in Machine Learning  
 
-### Reproducing the training approach implemented in DeepSeek R1
+### Reproducing the training approaches implemented in DeepSeek R1
 
 ---
 
