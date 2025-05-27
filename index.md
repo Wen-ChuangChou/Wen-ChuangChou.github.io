@@ -1,7 +1,8 @@
 ## Selected Recent Projects in Machine Learning  
 
-### Reproducing the training approach in DeepSeek R1
+### Reproducing the training approach implemented in DeepSeek R1
 
+---
 
 ### Sentiment Analysis
 My final model, <b>fine-tuned</b> for sentiment analysis using Llama 3, achieves an accuracy of 81.49%, marking an improvement of over 18% compared to the base model. The radar plot below illustrates the enhanced performance across various metrics.
