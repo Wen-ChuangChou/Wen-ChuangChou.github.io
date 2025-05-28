@@ -1,7 +1,6 @@
-## Selected Recent Projects in Machine Learning  
+## Selected Recent Projects in AI  
 
 ### Reproducing Post-Training Approaches from DeepSeek R1
-
 This project implemented two post-training techniques—**Supervised Fine-Tuning (SFT)** and **Group Relative Policy Optimization (GRPO)**—to fine-tune large language models (LLMs) using **8 H100 GPUs across 2 HPC nodes**. Building upon the [Hugging Face Open_R1](https://github.com/huggingface/open-r1) framework, I adapted and optimized the training configuration to run efficiently on high-performance computing (HPC) clusters.
 
 The LLM was fine-tuned using data distilled from DeepSeek R1, resulting in a substantial performance gain on the AIME 2024 benchmark, with accuracy improving from **10.0% to 66.7%**.
