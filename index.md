@@ -42,8 +42,7 @@ The LLM was fine-tuned using data distilled from DeepSeek R1, resulting in a sub
 
 </div>
 
-More details can be found in the project repository on [GitHub](https://github.com/Wen-ChuangChou/open-r1/tree/Qwen2.5-7B_SFT).  
-
+More details can be found in the project repository on [GitHub](https://github.com/Wen-ChuangChou/open-r1/tree/Qwen2.5-7B_SFT).<br><br> 
 
 ### Sentiment Analysis
 My final model, <b>fine-tuned</b> for sentiment analysis using Llama 3, achieves an accuracy of 81.49%, marking an improvement of over <b>18%</b> compared to the base model. The radar plot below illustrates the enhanced performance across various metrics.
@@ -52,7 +51,7 @@ My final model, <b>fine-tuned</b> for sentiment analysis using Llama 3, achieves
   <img src="https://github.com/Wen-ChuangChou/sentiment_analysis/blob/main/pic/radarplot.png?raw=true" alt="radar plot" width="400"/>
 </p>
 
-More details can be found in the project repository on [GitHub](https://github.com/Wen-ChuangChou/sentiment_analysis).  
+More details can be found in the project repository on [GitHub](https://github.com/Wen-ChuangChou/sentiment_analysis).<br><br>  
 
 
 ### Predicting Bike Traffic  
@@ -62,11 +61,11 @@ I implemented <b>Graph Attention Networks</b> to predict bike traffic volume usi
 <img src="https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/prediction.png?raw=true" alt="prediction" width="700"/>
 </p>
 
-This project won <b>second place</b> in the data science challenge at BTW 2023. More details are available on [GitHub](https://wen-chuangchou.github.io/Predict-Bike-Traffic/).  
+This project won <b>second place</b> in the data science challenge at BTW 2023. More details are available on [GitHub](https://wen-chuangchou.github.io/Predict-Bike-Traffic/).<br><br>  
 
 
 ### Speaker Identification  
-I developed a speaker identification system using <b>Transformer and Conformer encoders</b>, improving accuracy from <b>53.94% to 91.8%</b> on a validation dataset of 56,666 voice recordings. More details are available on [GitHub](https://wen-chuangchou.github.io/Speaker-identification/).
+I developed a speaker identification system using <b>Transformer and Conformer encoders</b>, improving accuracy from <b>53.94% to 91.8%</b> on a validation dataset of 56,666 voice recordings. More details are available on [GitHub](https://wen-chuangchou.github.io/Speaker-identification/).<br><br>  
 
 
 ### Anime Face Generator  
