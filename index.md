@@ -44,7 +44,6 @@ The LLM was fine-tuned using data distilled from DeepSeek R1, resulting in a sub
 
 More details can be found in the project repository on [GitHub](https://github.com/Wen-ChuangChou/open-r1/tree/Qwen2.5-7B_SFT).  
 
----
 
 ### Sentiment Analysis
 My final model, <b>fine-tuned</b> for sentiment analysis using Llama 3, achieves an accuracy of 81.49%, marking an improvement of over 18% compared to the base model. The radar plot below illustrates the enhanced performance across various metrics.
@@ -55,7 +54,6 @@ My final model, <b>fine-tuned</b> for sentiment analysis using Llama 3, achieves
 
 More details can be found in the project repository on [GitHub](https://github.com/Wen-ChuangChou/sentiment_analysis).  
 
----
 
 ### Predicting Bike Traffic  
 I implemented <b>Graph Attention Networks</b> to predict bike traffic volume using social and environmental data. The models were trained separately on datasets from Dresden, Leipzig, and Hamburg. The following plot illustrates the results across the three cities:
@@ -66,12 +64,10 @@ I implemented <b>Graph Attention Networks</b> to predict bike traffic volume usi
 
 This project won **second place** in the data science challenge at BTW 2023. More details are available on [GitHub](https://wen-chuangchou.github.io/Predict-Bike-Traffic/).  
 
----
 
 ### Speaker Identification  
-I developed a speaker identification system using <b>Transformer and Conformer encoders</b>, improving accuracy from 53.94% to 91.8% on a validation dataset of 56,666 voice recordings. More details are available on [GitHub](https://wen-chuangchou.github.io/Speaker-identification/).
+I developed a speaker identification system using <b>Transformer and Conformer encoders</b>, improving accuracy from <b>53.94% to 91.8%</b> on a validation dataset of 56,666 voice recordings. More details are available on [GitHub](https://wen-chuangchou.github.io/Speaker-identification/).
 
----
 
 ### Anime Face Generator  
 Using a dataset of approximately 71,000 anime face images, I trained a <b>diffusion probabilistic model</b> to generate anime-style portraits. The generative network improved significantly over training iterations, as shown in the images below:  
