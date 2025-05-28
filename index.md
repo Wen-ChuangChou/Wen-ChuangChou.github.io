@@ -46,7 +46,7 @@ More details can be found in the project repository on [GitHub](https://github.c
 
 
 ### Sentiment Analysis
-My final model, <b>fine-tuned</b> for sentiment analysis using Llama 3, achieves an accuracy of 81.49%, marking an improvement of over 18% compared to the base model. The radar plot below illustrates the enhanced performance across various metrics.
+My final model, <b>fine-tuned</b> for sentiment analysis using Llama 3, achieves an accuracy of 81.49%, marking an improvement of over <b>18%</b> compared to the base model. The radar plot below illustrates the enhanced performance across various metrics.
 
 <p align="center">
   <img src="https://github.com/Wen-ChuangChou/sentiment_analysis/blob/main/pic/radarplot.png?raw=true" alt="radar plot" width="400"/>
@@ -62,7 +62,7 @@ I implemented <b>Graph Attention Networks</b> to predict bike traffic volume usi
 <img src="https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/prediction.png?raw=true" alt="prediction" width="700"/>
 </p>
 
-This project won **second place** in the data science challenge at BTW 2023. More details are available on [GitHub](https://wen-chuangchou.github.io/Predict-Bike-Traffic/).  
+This project won <b>second place</b> in the data science challenge at BTW 2023. More details are available on [GitHub](https://wen-chuangchou.github.io/Predict-Bike-Traffic/).  
 
 
 ### Speaker Identification  
