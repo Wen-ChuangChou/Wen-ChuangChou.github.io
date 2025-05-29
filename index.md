@@ -39,7 +39,7 @@ This project implemented two post-training techniques—**Supervised Fine-Tuning
 
 </div>
 
-More details can be found in the project repository on [GitHub](https://github.com/Wen-ChuangChou/open-r1/tree/Qwen2.5-7B_SFT).<br><br> 
+More details can be found in the project repository on [GitHub](https://wen-chuangchou.github.io/Open-R1/).<br><br> 
 
 ### Sentiment Analysis
 My final model, **fine-tuned** for sentiment analysis using Llama 3, achieves an accuracy of 81.49%, marking an improvement of over **18%** compared to the base model. The radar plot below illustrates the enhanced performance across various metrics.
