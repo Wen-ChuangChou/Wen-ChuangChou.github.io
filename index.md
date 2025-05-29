@@ -42,31 +42,31 @@ This project implemented two post-training techniques—**Supervised Fine-Tuning
 More details can be found in the project repository on [GitHub](https://github.com/Wen-ChuangChou/open-r1/tree/Qwen2.5-7B_SFT).<br><br> 
 
 ### Sentiment Analysis
-My final model, <b>fine-tuned</b> for sentiment analysis using Llama 3, achieves an accuracy of 81.49%, marking an improvement of over <b>18%</b> compared to the base model. The radar plot below illustrates the enhanced performance across various metrics.
+My final model, **fine-tuned** for sentiment analysis using Llama 3, achieves an accuracy of 81.49%, marking an improvement of over **18%** compared to the base model. The radar plot below illustrates the enhanced performance across various metrics.
 
 <p align="center">
   <img src="https://github.com/Wen-ChuangChou/sentiment_analysis/blob/main/pic/radarplot.png?raw=true" alt="radar plot" width="400"/>
 </p>
 
-More details can be found in the project repository on [GitHub](https://github.com/Wen-ChuangChou/sentiment_analysis).<br><br>  
+More details can be found in the project repository on [GitHub](https://github.com/Wen-ChuangChou/sentiment_analysis).[Test](https://wen-chuangchou.github.io/sentiment_analysis)<br><br>  
 
 
 ### Predicting Bike Traffic  
-I implemented <b>Graph Attention Networks</b> to predict bike traffic volume using social and environmental data. The models were trained separately on datasets from Dresden, Leipzig, and Hamburg. The following plot illustrates the results across the three cities:
+I implemented **Graph Attention Networks** to predict bike traffic volume using social and environmental data. The models were trained separately on datasets from Dresden, Leipzig, and Hamburg. The following plot illustrates the results across the three cities:
 
 <p align="center">
 <img src="https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/prediction.png?raw=true" alt="prediction" width="700"/>
 </p>
 
-This project won <b>second place</b> in the data science challenge at BTW 2023. More details are available on [GitHub](https://wen-chuangchou.github.io/Predict-Bike-Traffic/).<br><br>  
+This project won **second place** in the data science challenge at BTW 2023. More details are available on [GitHub](https://wen-chuangchou.github.io/Predict-Bike-Traffic/).<br><br>  
 
 
 ### Speaker Identification  
-I developed a speaker identification system using <b>Transformer and Conformer encoders</b>, improving accuracy from <b>53.94% to 91.8%</b> on a validation dataset of 56,666 voice recordings. More details are available on [GitHub](https://wen-chuangchou.github.io/Speaker-identification/).<br><br>  
+I developed a speaker identification system using **Transformer and Conformer encoders**, improving accuracy from **53.94% to 91.8%** on a validation dataset of 56,666 voice recordings. More details are available on [GitHub](https://wen-chuangchou.github.io/Speaker-identification/).<br><br>  
 
 
 ### Anime Face Generator  
-Using a dataset of approximately 71,000 anime face images, I trained a <b>diffusion probabilistic model</b> to generate anime-style portraits. The generative network improved significantly over training iterations, as shown in the images below:  
+Using a dataset of approximately 71,000 anime face images, I trained a **diffusion probabilistic model** to generate anime-style portraits. The generative network improved significantly over training iterations, as shown in the images below:  
 
 After 1,000 iterations (left) vs. 20,000 iterations (right):
 <p align="center">
