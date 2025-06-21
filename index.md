@@ -1,4 +1,21 @@
-## Selected Recent Projects in AI  
+# Selected AI Projects
+## AI Aigent : Agentic Retrieval-Augmented-Generation (RAG) Project
+
+My work on **Agentic RAG** significantly enhances Large Language Model (LLM) performance for complex information-seeking. This project integrates intelligent **AI agents** into the RAG pipeline, yielding remarkably more accurate, robust, and contextually rich responses than traditional RAG.  
+
+**Brief Technique & Impact:**  
+I developed an **AI agent** (using the `smolagent` package) capable of dynamic decision-making, iterative query reformulation, and intelligent document evaluation. A key contribution is an **optimized parallel processing pipeline** for efficient FAISS-based vector database creation from technical documentation. This framework fundamentally improves LLM output grounding through advanced reasoning and self-correction.  
+
+**Performance Highlights:**  
+Evaluated on a technical Q\&A dataset, Agentic RAG consistently demonstrated superior accuracy across various LLMs compared to both Standard RAG and standalone LLM performance:
+| Model | Agentic RAG Accuracy | Standard RAG Accuracy | LLM Only Accuracy |
+| :---- | :------------------ | :------------------- | :---------------- |
+| Gemini-1.5-flash | 91.5% | 85.4% | 35.4% |
+| Gemini-2.0-flash | 90.8% | 85.4% | 64.1% |
+| Gemini-2.5-flash-preview-05-20 | 90.8% | 86.2% | 63.8% |
+
+More details can be found in the project repository on [GitHub](https://github.com/Wen-ChuangChou/Agentic_RAG/tree/optimize/agent).
+
 
 ### Reproducing Post-Training Approaches from DeepSeek R1
 This project implemented two post-training techniques—**Supervised Fine-Tuning (SFT)** and **Group Relative Policy Optimization (GRPO)**—to fine-tune large language models (LLMs) using **8 H100 GPUs across 2 HPC nodes**. The LLMs were fine-tuned using data distilled from DeepSeek R1, resulting in a substantial performance gain on the AIME 2024 benchmark, with accuracy improving from **10.0% to 66.7%**.
