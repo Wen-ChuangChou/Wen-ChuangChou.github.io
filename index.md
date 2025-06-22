@@ -7,7 +7,7 @@ My work on **Agentic RAG** significantly enhances Large Language Model (LLM) per
 I developed an **AI agent** (using the `smolagent` package) capable of dynamic decision-making, iterative query reformulation, and intelligent document evaluation. A key contribution is an **optimized parallel processing pipeline** for efficient FAISS-based vector database creation from technical documentation. This framework fundamentally improves LLM output grounding through advanced reasoning and self-correction.  
 
 **Performance Highlights:**  
-Evaluated on a technical Q\&A dataset, Agentic RAG consistently demonstrated superior accuracy across various LLMs compared to both Standard RAG and standalone LLM performance: 
+Evaluated on a technical Q&A dataset, Agentic RAG consistently demonstrated superior accuracy across various LLMs compared to both Standard RAG and standalone LLM performance: 
 
 |         Model         | Agentic RAG Accuracy | Standard RAG Accuracy | LLM Only Accuracy |
 |:---------------------:|:--------------------:|:----------------------:|:------------------:|
