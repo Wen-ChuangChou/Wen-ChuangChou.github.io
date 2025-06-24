@@ -1,5 +1,5 @@
 # Selected AI Projects
-## AI Aigent : Agentic Retrieval-Augmented-Generation (RAG) Project
+## AI agent : Agentic Retrieval-Augmented-Generation (RAG) Project
 
 My work on **Agentic RAG** significantly enhances Large Language Model (LLM) performance for complex information-seeking. This project integrates intelligent **AI agents** into the RAG pipeline, yielding remarkably more accurate, robust, and contextually rich responses than traditional RAG.  
 
