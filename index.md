@@ -20,38 +20,37 @@ More details can be found in the project repository on [GitHub](https://github.c
 
 
 ## Reproducing Post-Training Approaches from DeepSeek R1
-This project implemented two post-training techniques—**Supervised Fine-Tuning (SFT)** and **Group Relative Policy Optimization (GRPO)**—to fine-tune large language models (LLMs) using **8 H100 GPUs across 2 HPC nodes**. The LLMs were fine-tuned using data distilled from DeepSeek R1, resulting in a substantial performance gain on the AIME 2024 benchmark, with accuracy improving from **10.0% to 66.7%**.
+This project implemented two post-training techniques—**Supervised Fine-Tuning (SFT)** and **Group Relative Policy Optimization (GRPO)**—to fine-tune large language models (LLMs) using **8 H100 GPUs across 2 HPC nodes**. The Qwen2.5 LLM was fine-tuned using data distilled from DeepSeek R1, resulting in a substantial performance gain on AIME 2024 score (13.3 to 56.7) and GPQA Diamond (28.3 to 54.5)..
 
 <div align="center">
 
 <table>
   <thead>
     <tr>
-      <th style="text-align:center;"><b>Model</b></th>
-      <th style="text-align:center;"><b>AIME 2024</b> pass@1</th>
+      <th style="text-align:center;">Model</th>
+      <th style="text-align:center;">AIME 2024<br>pass@1</th>
+      <th style="text-align:center;">MATH-500<br>pass@1</th>
+      <th style="text-align:center;">GPQA Diamond<br>pass@1</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:center;">
-        <b>Qwen2.5-Math-7B-Instruct</b><br>
-        <sub>(Original model)</sub>
-      </td>
-      <td style="text-align:center;">10.0</td>
+      <td style="text-align:center;">Qwen2.5-Math-7B-Instruct<br> (Original)</td>
+      <td style="text-align:center;"><b>13.3</b></td>
+      <td style="text-align:center;"><b>80.2</b></td>
+      <td style="text-align:center;"><b>28.3</b></td>
     </tr>
     <tr>
-      <td style="text-align:center;">
-        <b>Qwen2.5-Math-7B-Instruct (Fine-tuned)</b><br>
-        <sub>(Supervised Fine-tuned on data distilled from DeepSeek R1)</sub>
-      </td>
-      <td style="text-align:center;">66.7</td>
+      <td style="text-align:center;">Qwen2.5-Math-7B-Instruct<br>(Fine-tuned on DeepSeek R1 distilled data)</td>
+      <td style="text-align:center;"><b>56.7</b></td>
+      <td style="text-align:center;"><b>89.8</b></td>
+      <td style="text-align:center;"><b>54.5</b></td>
     </tr>
     <tr>
-      <td style="text-align:center;">
-        <b>DeepSeek-R1-Distill-Qwen-7B</b><br>
-        <sub>(Reportedly fine-tuned on its own distilled data)</sub>
-      </td>
-      <td style="text-align:center;">50.0</td>
+      <td style="text-align:center;">DeepSeek-R1-Distill-Qwen-7B (Teacher)</td>
+      <td style="text-align:center;"><b>53.3</b></td>
+      <td style="text-align:center;"><b>93.2</b></td>
+      <td style="text-align:center;"><b>53.0</b></td>
     </tr>
   </tbody>
 </table>
