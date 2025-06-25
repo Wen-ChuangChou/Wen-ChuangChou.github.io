@@ -3,10 +3,10 @@
 
 My work on **Agentic RAG** significantly enhances Large Language Model (LLM) performance for complex information-seeking. This project integrates intelligent **AI agents** into the RAG pipeline, yielding remarkably more accurate, robust, and contextually rich responses than traditional RAG.  
 
-**Brief Technique & Impact:**  
+### Brief Technique & Impact:
 I developed an **AI agent** (using the `smolagent` package) capable of dynamic decision-making, iterative query reformulation, and intelligent document evaluation. A key contribution is an **optimized parallel processing pipeline** for efficient FAISS-based vector database creation from technical documentation. This framework fundamentally improves LLM output grounding through advanced reasoning and self-correction.  
 
-**Performance Highlights:**  
+### Performance Highlights: 
 Evaluated on a technical Q&A dataset, Agentic RAG consistently demonstrated superior accuracy across various LLMs compared to both Standard RAG and standalone LLM performance:
 
 | Model | Agentic RAG Accuracy | Standard RAG Accuracy | LLM Only Accuracy |
@@ -22,11 +22,11 @@ More details can be found in the project repository on [GitHub](https://github.c
 
 This project showcases a successful methodology for significantly enhancing large language model performance through advanced **fine-tuning** in a distributed HPC environment.
 
-**Brief Technique & Impact:**
+### Brief Technique & Impact:
 
 This work focused on post-training weaker LLMs by fine-tuning the Qwen2.5 model using high-quality data distilled from DeepSeek R1. Employing Supervised Fine-Tuning (SFT) and Group Relative Policy Optimization (GRPO) techniques across 8 H100 GPUs distributed over two HPC nodes, a key aspect of this project involved learning, optimizing, and simplifying the deployment of the training workflow for common HPC setups. This provides a reproducible and clear guide for environments that might differ from original project assumptions, making advanced LLM training more accessible.
 
-**Performance Highlights:**
+### Performance Highlights:
 
 The rigorous fine-tuning process yielded substantial gains, boosting the Qwen2.5-Math-7B-Instruct model's `pass@1` accuracy on the AIME 2024 benchmark from 13.3% to a remarkable **56.7%**, and on GPQA Diamond from 28.3% to **54.5%**. This demonstrates the effectiveness of the distilled data approach in bringing weaker LLMs closer to DeepSeek R1's performance.
 
