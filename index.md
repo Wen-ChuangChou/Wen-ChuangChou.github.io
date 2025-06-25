@@ -9,18 +9,30 @@ I developed an **AI agent** (using the `smolagent` package) capable of dynamic d
 **Performance Highlights:**  
 Evaluated on a technical Q&A dataset, Agentic RAG consistently demonstrated superior accuracy across various LLMs compared to both Standard RAG and standalone LLM performance: 
 
-|         Model         | Agentic RAG Accuracy | Standard RAG Accuracy | LLM Only Accuracy |
-|:---------------------:|:--------------------:|:----------------------:|:------------------:|
-|  Gemini-1.5-flash     |        91.5%         |         85.4%          |       35.4%        |
-|  Gemini-2.0-flash     |        90.8%         |         85.4%          |       64.1%        |
-| Gemini-2.5-flash-preview-05-20 |    90.8%         |         86.2%          |       63.8%        |
+<div align="center">
 
+| Model | Agentic RAG Accuracy | Standard RAG Accuracy | LLM Only Accuracy |
+|:---------------------:|:--------------------:|:----------------------:|:------------------:|
+| Gemini-1.5-flash      |        91.5%         |         85.4%          |       35.4%        |
+| Gemini-2.0-flash      |        90.8%         |         85.4%          |       64.1%        |
+| Gemini-2.5-flash-preview-05-20 |        90.8%         |         86.2%          |       63.8%        |
+
+</div>
 
 More details can be found in the project repository on [GitHub](https://github.com/Wen-ChuangChou/Agentic_RAG/tree/optimize/agent).
 
 
-## Reproducing Post-Training Approaches from DeepSeek R1
-This project implemented two post-training techniques—**Supervised Fine-Tuning (SFT)** and **Group Relative Policy Optimization (GRPO)**—to fine-tune large language models (LLMs) using **8 H100 GPUs across 2 HPC nodes**. The Qwen2.5 LLM was fine-tuned using data distilled from DeepSeek R1, resulting in a substantial performance gain on AIME 2024 score (13.3 to 56.7) and GPQA Diamond (28.3 to 54.5)..
+## Distilling DeepSeek R1 for Enhanced LLM Performance
+
+This project showcases a successful methodology for significantly enhancing large language model performance through advanced **fine-tuning** in a distributed HPC environment.
+
+**Brief Technique & Impact:**
+
+This work focused on post-training weaker LLMs by fine-tuning the Qwen2.5 model using high-quality data distilled from DeepSeek R1. Employing Supervised Fine-Tuning (SFT) and Group Relative Policy Optimization (GRPO) techniques across 8 H100 GPUs distributed over two HPC nodes, a key aspect of this project involved learning, optimizing, and simplifying the deployment of the training workflow for common HPC setups. This provides a reproducible and clear guide for environments that might differ from original project assumptions, making advanced LLM training more accessible.
+
+**Performance Highlights:**
+
+The rigorous fine-tuning process yielded substantial gains, boosting the Qwen2.5-Math-7B-Instruct model's `pass@1` accuracy on the AIME 2024 benchmark from 13.3% to a remarkable **56.7%**, and on GPQA Diamond from 28.3% to **54.5%**. This demonstrates the effectiveness of the distilled data approach in bringing weaker LLMs closer to DeepSeek R1's performance.
 
 <div align="center">
 
