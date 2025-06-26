@@ -20,6 +20,8 @@ Evaluated on a technical Q&A dataset, Agentic RAG consistently demonstrated supe
 
 More details can be found in the project repository on [GitHub](https://github.com/Wen-ChuangChou/Agentic_RAG/tree/optimize/agent).
 
+---
+
 ## AI Agent: Tool-Augmented Reasoning on GAIA Benchmark
 
 I developed a tool-augmented AI code agent using the `smolagents` framework to tackle complex, agent-evaluating questions from the GAIA benchmark.  
@@ -76,6 +78,8 @@ The rigorous fine-tuning process yielded substantial gains, boosting the Qwen2.5
 
 More details can be found in the project repository on [GitHub](https://wen-chuangchou.github.io/Open-R1/).<br><br> 
 
+---
+
 ## Fine-Tuning Llama 3 for Sentiment Analysis
 
 This project fine-tunes **Llama 3.1–8B Instruct** to perform sentiment classification on short-form text, such as tweets. The model learns to identify sentiments—**positive**, **neutral**, or **negative**—using the `tweet_sentiment_extraction` subset from the **MTEB benchmark**.
@@ -99,6 +103,7 @@ On the MTEB tweet sentiment test set, the fine-tuned model achieved a notable ac
   <img src="https://github.com/Wen-ChuangChou/sentiment_analysis/blob/main/pic/radarplot.png?raw=true" alt="Radar plot showing model performance" width="400"/>
 </p>
 
+---
 
 ## Predicting Bike Traffic  
 I implemented **Graph Attention Networks** to predict bike traffic volume using social and environmental data. The models were trained separately on datasets from Dresden, Leipzig, and Hamburg. The following plot illustrates the results across the three cities:
@@ -109,10 +114,12 @@ I implemented **Graph Attention Networks** to predict bike traffic volume using 
 
 This project won **second place** in the data science challenge at BTW 2023. More details are available on [GitHub](https://wen-chuangchou.github.io/Predict-Bike-Traffic/).<br><br>  
 
+---
 
 ## Speaker Identification  
 I developed a speaker identification system using **Transformer and Conformer encoders**, improving accuracy from **53.94% to 91.8%** on a validation dataset of 56,666 voice recordings. More details are available on [GitHub](https://wen-chuangchou.github.io/Speaker-identification/).<br><br>  
 
+---
 
 ## Anime Face Generator  
 Using a dataset of approximately 71,000 anime face images, I trained a **diffusion probabilistic model** to generate anime-style portraits. The generative network improved significantly over training iterations, as shown in the images below:  
