@@ -9,14 +9,17 @@ I developed an **AI agent** (using the `smolagent` package) capable of dynamic d
 ### Performance Highlights 
 Evaluated on a technical Q&A dataset, Agentic RAG consistently demonstrated superior accuracy across various LLMs compared to both Standard RAG and standalone LLM performance:
 
-
-<p align="center"><b>All values below are accuracy scores (in %)</b></p>
-
+<div align="center">
+  
 |       **Model**        | **Agentic RAG** | **Standard RAG** | **LLM Only** |
 |:----------------------:|:---------------:|:----------------:|:------------:|
 | Gemini-1.5-flash       |      91.5       |       85.4       |     35.4     |
 | Gemini-2.0-flash       |      90.8       |       85.4       |     64.1     |
 | Gemini-2.5-flash-preview-05-20 | 90.8       |       86.2       |     63.8     |
+
+</div>
+
+<p align="center"><b>All values above are accuracy scores (in %)</b></p>
 
 
 More details can be found in the project repository on [GitHub](https://github.com/Wen-ChuangChou/Agentic_RAG/tree/optimize/agent).
