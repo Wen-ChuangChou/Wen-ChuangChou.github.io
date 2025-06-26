@@ -26,7 +26,7 @@ This project showcases a successful methodology for significantly enhancing larg
 
 ### Brief Technique & Impact:
 
-This work focused on post-training weaker LLMs by fine-tuning the Qwen2.5 model using high-quality data distilled from DeepSeek R1. Employing Supervised Fine-Tuning (SFT) and Group Relative Policy Optimization (GRPO) techniques across 8 H100 GPUs distributed over two HPC nodes, a key aspect of this project involved learning, optimizing, and simplifying the deployment of the training workflow for common HPC setups. This provides a reproducible and clear guide for environments that might differ from original project assumptions, making advanced LLM training more accessible.
+This work focused on post-training weaker LLMs by fine-tuning the Qwen2.5 model using high-quality data distilled from DeepSeek R1. Employing Supervised Fine-Tuning (SFT) and Group Relative Policy Optimization (GRPO) techniques across **8 H100 GPUs** distributed over **two HPC nodes**, a key aspect of this project involved learning, optimizing, and simplifying the deployment of the training workflow for common HPC setups.
 
 ### Performance Highlights:
 
