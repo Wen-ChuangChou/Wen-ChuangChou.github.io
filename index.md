@@ -44,8 +44,8 @@ The rigorous fine-tuning process yielded substantial gains, boosting the Qwen2.5
   <tbody>
     <tr>
       <td style="text-align:center;">Qwen2.5-Math-7B-Instruct<br> (Original)</td>
-      <td style="text-align:center;"><b>13.3</b></td>
-      <td style="text-align:center;"><b>80.2</b></td>
+      <td style="text-align:center;">13.3</td>
+      <td style="text-align:center;">80.2</td>
       <td style="text-align:center;"><b>28.3</b></td>
     </tr>
     <tr>
