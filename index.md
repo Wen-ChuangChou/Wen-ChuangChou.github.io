@@ -95,9 +95,9 @@ On the MTEB tweet sentiment test set, the fine-tuned model achieved a notable ac
 <p align="center"><b>Accuracy on MTEB Tweet Sentiment Classification</b></p>
 
 | **Model**                 | **Accuracy (%)** |
-|---------------------------|------------------|
-| Llama 3.1–8B (zero-shot)  | 63.41            |
-| Llama 3.1–8B (fine-tuned) | **81.49**        |
+|:-------------------------:|:----------------:|
+| Llama 3.1–8B (zero-shot)  |      63.41        |
+| Llama 3.1–8B (fine-tuned) |    **81.49**      |
 
 <p align="center">
   <img src="https://github.com/Wen-ChuangChou/sentiment_analysis/blob/main/pic/radarplot.png?raw=true" alt="Radar plot showing model performance" width="400"/>
