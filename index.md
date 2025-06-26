@@ -29,6 +29,8 @@ This system achieved a **40%** correct answer rate—substantially outperforming
 
 > **Note:** This project is currently under active development to further improve accuracy and generalization.
 
+---
+
 ## Distilling DeepSeek R1 for Enhanced LLM Performance
 
 This project showcases a successful methodology for significantly enhancing large language model performance through advanced **fine-tuning** in a distributed HPC environment.
