@@ -21,6 +21,14 @@ Evaluated on a technical Q&A dataset, Agentic RAG consistently demonstrated supe
 
 More details can be found in the project repository on [GitHub](https://github.com/Wen-ChuangChou/Agentic_RAG/tree/optimize/agent).
 
+## AI Agent: Tool-Augmented Reasoning on GAIA Benchmark
+
+I developed a tool-augmented AI code agent using the `smolagents` framework to tackle complex, agent-evaluating questions from the GAIA benchmark.  
+This system achieved a **40%** correct answer rate—substantially outperforming GPT-4, which reached **14.4%** under the same conditions.
+
+> **Note:** This project is currently under active development to further improve accuracy and generalization.
+
+More details can be found in the project repository on GitHub.
 
 ## Distilling DeepSeek R1 for Enhanced LLM Performance
 
