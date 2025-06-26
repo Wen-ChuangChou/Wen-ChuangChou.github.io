@@ -93,7 +93,6 @@ Using instruction-style prompts and a streamlined training pipeline, the model w
 On the MTEB tweet sentiment test set, the fine-tuned model achieved a notable accuracy gain:
 
 <p align="center"><b>Accuracy on MTEB Tweet Sentiment Classification</b></p>
-
 <div align="center">
 
 | **Model**                 | **Accuracy (%)** |
