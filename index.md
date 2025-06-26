@@ -8,16 +8,12 @@ I developed an **AI agent** (using the `smolagent` package) capable of dynamic d
 
 ### Performance Highlights 
 Evaluated on a technical Q&A dataset, Agentic RAG consistently demonstrated superior accuracy across various LLMs compared to both Standard RAG and standalone LLM performance:
-
-<div align="center">
   
 |       **Model**        | **Agentic RAG** | **Standard RAG** | **LLM Only** |
 |:----------------------:|:---------------:|:----------------:|:------------:|
 | Gemini-1.5-flash       |      91.5       |       85.4       |     35.4     |
 | Gemini-2.0-flash       |      90.8       |       85.4       |     64.1     |
 | Gemini-2.5-flash-preview-05-20 | 90.8       |       86.2       |     63.8     |
-
-</div>
 
 <p align="center"><b>All values above are accuracy scores (in %)</b></p>
 
@@ -93,14 +89,11 @@ Using instruction-style prompts and a streamlined training pipeline, the model w
 On the MTEB tweet sentiment test set, the fine-tuned model achieved a notable accuracy gain:
 
 <p align="center"><b>Accuracy on MTEB Tweet Sentiment Classification</b></p>
-<div align="center">
 
 | **Model**                 | **Accuracy (%)** |
 |---------------------------|------------------|
 | Llama 3.1–8B (zero-shot)  | 63.41            |
 | Llama 3.1–8B (fine-tuned) | **81.49**        |
-
-</div>
 
 <p align="center">
   <img src="https://github.com/Wen-ChuangChou/sentiment_analysis/blob/main/pic/radarplot.png?raw=true" alt="Radar plot showing model performance" width="400"/>
