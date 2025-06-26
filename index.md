@@ -84,7 +84,7 @@ My final model, **fine-tuned** for sentiment analysis using Llama 3, achieves an
   <img src="https://github.com/Wen-ChuangChou/sentiment_analysis/blob/main/pic/radarplot.png?raw=true" alt="radar plot" width="400"/>
 </p>
 
-More details can be found in the project repository on [GitHub](https://wen-chuangchou.github.io/sentiment_analysis/).<br><br>  
+More details can be found in the project repository on [GitHub](https://wen-chuangchou.github.io/Sentiment-Analysis/).<br><br>  
 
 
 ## Predicting Bike Traffic  
