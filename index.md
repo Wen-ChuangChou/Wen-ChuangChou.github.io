@@ -9,16 +9,43 @@ I developed an **AI agent** (using the `smolagent` package) capable of dynamic d
 ### Performance Highlights 
 Evaluated on a technical Q&A dataset, Agentic RAG consistently demonstrated superior accuracy across various LLMs compared to both Standard RAG and standalone LLM performance:
   
-|       **Model**        | **Agentic RAG** | **Standard RAG** | **LLM Only** |
-|:----------------------:|:---------------:|:----------------:|:------------:|
-| Gemini-1.5-flash       |      91.5       |       85.4       |     35.4     |
-| Gemini-2.0-flash       |      90.8       |       85.4       |     64.1     |
-| Gemini-2.5-flash-preview-05-20 | 90.8       |       86.2       |     63.8     |
+<div align="center">
+  <table>
+    <thead>
+      <tr>
+        <th align="center">Model</th>
+        <th align="center">Agentic RAG</th>
+        <th align="center">Standard RAG</th>
+        <th align="center">LLM Only</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td align="center">Gemini-1.5-flash</td>
+        <td align="center">91.5%</td>
+        <td align="center">85.4%</td>
+        <td align="center">35.4%</td>
+      </tr>
+      <tr>
+        <td align="center">Gemini-2.0-flash</td>
+        <td align="center">90.8%</td>
+        <td align="center">85.4%</td>
+        <td align="center">64.1%</td>
+      </tr>
+      <tr>
+        <td align="center">Gemini-2.5-flash</td>
+        <td align="center">90.8%</td>
+        <td align="center">86.2%</td>
+        <td align="center">63.8%</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
 
 <p align="center"><b>All values above are accuracy scores (in %)</b></p>
 
 
-More details can be found in the project repository on [GitHub](https://github.com/Wen-ChuangChou/Agentic_RAG/tree/optimize/agent).
+More details can be found in the project repository on [GitHub](https://wen-chuangchou.github.io/Agentic_RAG/).
 
 ---
 
@@ -104,6 +131,8 @@ On the MTEB tweet sentiment test set, the fine-tuned model achieved a notable ac
 <p align="center">
   <img src="https://github.com/Wen-ChuangChou/sentiment_analysis/blob/main/pic/radarplot.png?raw=true" alt="Radar plot showing model performance" width="400"/>
 </p>
+
+More details can be found in the project repository on [GitHub](https://wen-chuangchou.github.io/Sentiment-Analysis/).
 
 ---
 ## Fine-Tuning Stable Diffusion with LoRA
