@@ -106,6 +106,41 @@ On the MTEB tweet sentiment test set, the fine-tuned model achieved a notable ac
 </p>
 
 ---
+## Fine-Tuning Stable Diffusion with LoRA
+
+This project fine-tunes **Stable Diffusion v2** (by Stability AI) using the **Hugging Face Diffusers** library to generate images in a customized visual style—in this case, the Naruto anime aesthetic.
+
+### Technique & Impact
+
+The fine-tuning was performed using **LoRA** (Low-Rank Adaptation), which adapts pretrained diffusion models by inserting trainable low-rank matrices into existing weights, significantly reducing memory and compute requirements. The process was accelerated using **8× H100 GPUs** across **2 HPC nodes**, achieving a **77% reduction in training time** compared to single-GPU training.
+
+We used the [`lambdalabs/naruto-blip-captions`](https://huggingface.co/datasets/lambdalabs/naruto-blip-captions) dataset to teach the model the distinct visual characteristics of Naruto anime.
+
+#### Dataset Examples
+
+
+<p float="left" align="center">
+  <img src="https://github.com/Wen-ChuangChou/stable-diffusion-fine-tuning/blob/main/naruto_image1.jpg" alt="Naruto Example 1" width="300"/>
+  &nbsp;
+  <img src="https://github.com/Wen-ChuangChou/stable-diffusion-fine-tuning/blob/main/naruto_image2.jpg" alt="Naruto Example 2" width="300"/>
+</p>
+
+
+### Performance Highlights
+
+**Prompt:**  
+*A detailed portrait of Hello Kitty, rendered in the style of Naruto anime, with a blue background.*
+
+| Model                     | Output Example |
+|--------------------------|----------------|
+| **Base Stable Diffusion** | <img src="https://github.com/Wen-ChuangChou/stable-diffusion-fine-tuning/blob/main/Hello_Kitty_naruto_base.png" alt="Base SD" width="300"/> |
+| **LoRA Fine-Tuned Model** | <img src="https://github.com/Wen-ChuangChou/stable-diffusion-fine-tuning/blob/main/Hello_Kitty_lora.png" alt="LoRA Output 1" width="300"/> <br> <img src="https://github.com/Wen-ChuangChou/stable-diffusion-fine-tuning/blob/main/Hello_Kitty_lora2.png" alt="LoRA Output 2" width="300"/> |
+
+The base model fails to capture Naruto's stylistic elements, while the fine-tuned model successfully generates images in the correct anime style.
+
+> **Note:** This project is currently under active development to further improve accuracy and generalization.
+
+---
 
 ## Predicting Bike Traffic  
 I implemented **Graph Attention Networks** to predict bike traffic volume using social and environmental data. The models were trained separately on datasets from Dresden, Leipzig, and Hamburg. The following plot illustrates the results across the three cities:
