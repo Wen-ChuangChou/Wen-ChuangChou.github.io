@@ -132,7 +132,7 @@ We used the [`lambdalabs/naruto-blip-captions`](https://huggingface.co/datasets/
 *A detailed portrait of Hello Kitty, rendered in the style of Naruto anime, with a blue background.*
 
 | Model                     | Output Example |
-|--------------------------|----------------|
+|:--------------------------:|:----------------:|
 | **Base Stable Diffusion** | <img src="https://github.com/Wen-ChuangChou/stable-diffusion-fine-tuning/raw/main/Hello_Kitty_naruto_base.png" alt="Base SD" width="220"/> |
 | **LoRA Fine-Tuned Model** | <img src="https://github.com/Wen-ChuangChou/stable-diffusion-fine-tuning/raw/main/Hello_Kitty_lora.png" alt="LoRA Output 1" width="220"/> <br> <img src="https://github.com/Wen-ChuangChou/stable-diffusion-fine-tuning/blob/main/Hello_Kitty_lora2.png" alt="LoRA Output 2" width="220"/> |
 
