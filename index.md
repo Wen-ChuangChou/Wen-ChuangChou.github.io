@@ -1,11 +1,9 @@
 # My AI Portfolio
-### Architecting Agentic Workflows & LLM Distillation
-
 *Engineering advanced LLMs—from benchmarking and profiling performance to distilling DeepSeek R1.*
 
-* [LLM Benchmarking](#llm-benchmarking)
+* [LLM Benchmarking and Profiling](#llm-benchmarking)
 * [AI Agent](#ai-agent--agentic-retrieval-augmented-generation-rag)
-* [LLM and Diffusion Training and Fine-Tuning ](#distilling-deepseek-r1-for-enhanced-llm-performance)
+* [LLM Distillation & Diffusion Fine-Tuning](#distilling-deepseek-r1-for-enhanced-llm-performance)
 
 ---
 
