@@ -1,9 +1,13 @@
-# Selected AI Projects
+# My AI Portfolio
+### Architecting Agentic Workflows & LLM Distillation
 
-## Table of Contents
-* [Background](#background)
-* [AI Agent](#AI agent : Agentic Retrieval-Augmented-Generation (RAG))
-* [AI Model Training and Fine-Tuning](#Distilling DeepSeek R1 for Enhanced LLM Performance)
+*Engineering advanced LLMs—from benchmarking and profiling performance to distilling DeepSeek R1.*
+
+* [LLM Benchmarking](#llm-benchmarking)
+* [AI Agent](#ai-agent--agentic-retrieval-augmented-generation-rag)
+* [LLM and Diffusion Training and Fine-Tuning ](#distilling-deepseek-r1-for-enhanced-llm-performance)
+
+---
 
 ## LLM Benchmarking
 
