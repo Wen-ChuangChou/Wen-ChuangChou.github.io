@@ -1,13 +1,24 @@
 # My AI Portfolio
 *Engineering advanced LLMs—from benchmarking and profiling performance to distilling DeepSeek R1.*
 
-* [LLM Benchmarking and Profiling](#llm-benchmarking)
+* [LLM Benchmarking and Profiling](#performance-benchmarking-fp32-vs-bf16-mixed-precision)
 * [AI Agent](#ai-agent--agentic-retrieval-augmented-generation-rag)
-* [LLM Distillation & Diffusion Fine-Tuning](#distilling-deepseek-r1-for-enhanced-llm-performance)
+* [LLM/Diffusion Distillation & Fine-Tuning](#distilling-deepseek-r1-for-enhanced-llm-performance)
 
 ---
 
-## LLM Benchmarking
+## Performance Benchmarking: FP32 vs. BF16 Mixed Precision
+
+### Brief Technique & Impact 
+Adopting BF16 mixed precision significantly accelerates model performance, yielding up to a 6x increase in inference throughput and enabling the training of larger model architectures that fail with full precision due to memory constraints (Out Of Memory, OOM).
+
+<p align="center">
+  <img src="https://github.com/Wen-ChuangChou/Wen-ChuangChou.github.io/blob/master/images/benchmark_comparison_training.png?raw=true" width="45%" />
+  <img src="https://github.com/Wen-ChuangChou/Wen-ChuangChou.github.io/blob/master/images/benchmark_comparison_inference.png?raw=true" width="45%" />
+</p>
+
+### Performance Highlights
+The benchmarks demonstrate BF16's superior scalability. In inference, the largest 2.7B model achieves a nearly 600% speedup, jumping from 6,642 to 38,642 tokens/second. The small model (128M parameters) sees throughput nearly triple, reaching over 400,000 tokens/second. Training benefits are equally critical; while the 128M model trains 2.8x faster with BF16, the technique’s true value is unlocking larger architectures. FP32 fails to train the 'large' configuration due to memory limits, whereas BF16 handles it successfully at 24,773 tokens/second, proving essential for resource-constrained high-performance tasks.
 
 ## AI agent : Agentic Retrieval-Augmented-Generation (RAG)
 
