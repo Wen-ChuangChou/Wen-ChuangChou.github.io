@@ -13,8 +13,8 @@
 The benchmarks evaluate a modern decoder-only Transformer, spanning five configurations from a "Small" base (12 layers, 768 hidden dimension) up to a 2.7B parameter model. Adopting BF16 mixed precision boosts inference throughput up to 6x and enables training larger, memory-intensive architectures that otherwise fail with full precision due to Out-of-Memory (OOM) constraints.
 
 <p align="center">
-  <img src="https://github.com/Wen-ChuangChou/Wen-ChuangChou.github.io/blob/master/images/benchmark_comparison_training.png?raw=true" width="45%" />
-  <img src="https://github.com/Wen-ChuangChou/Wen-ChuangChou.github.io/blob/master/images/benchmark_comparison_inference.png?raw=true" width="45%" />
+  <img src="https://github.com/Wen-ChuangChou/Wen-ChuangChou.github.io/blob/master/images/benchmark_comparison_training.png?raw=true" width="49%" />
+  <img src="https://github.com/Wen-ChuangChou/Wen-ChuangChou.github.io/blob/master/images/benchmark_comparison_inference.png?raw=true" width="49%" />
 </p>
 
 ### Performance Highlights
