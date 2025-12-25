@@ -10,7 +10,7 @@
 ## Performance Benchmarking: FP32 vs. BF16 Mixed Precision
 
 ### Brief Technique & Impact 
-Adopting BF16 mixed precision significantly accelerates model performance, yielding up to a 6x increase in inference throughput and enabling the training of larger model architectures that fail with full precision due to memory constraints (Out Of Memory, OOM).
+The benchmarks evaluate a modern decoder-only Transformer, spanning five configurations from a "Small" base (12 layers, 768 hidden dimension) up to a 2.7B parameter model. Adopting BF16 mixed precision boosts inference throughput up to 6x and enables training larger, memory-intensive architectures that otherwise fail with full precision due to Out-of-Memory (OOM) constraints.
 
 <p align="center">
   <img src="https://github.com/Wen-ChuangChou/Wen-ChuangChou.github.io/blob/master/images/benchmark_comparison_training.png?raw=true" width="45%" />
@@ -20,12 +20,14 @@ Adopting BF16 mixed precision significantly accelerates model performance, yield
 ### Performance Highlights
 The benchmarks demonstrate BF16's superior scalability. In inference, the largest 2.7B model achieves a nearly 600% speedup, jumping from 6,642 to 38,642 tokens/second. The small model (128M parameters) sees throughput nearly triple, reaching over 400,000 tokens/second. Training benefits are equally critical; while the 128M model trains 2.8x faster with BF16, the technique’s true value is unlocking larger architectures. FP32 fails to train the 'large' configuration due to memory limits, whereas BF16 handles it successfully at 24,773 tokens/second, proving essential for resource-constrained high-performance tasks.
 
+---
+
 ## AI agent : Agentic Retrieval-Augmented-Generation (RAG)
 
 My work on **Agentic RAG** significantly enhances Large Language Model (LLM) performance for complex information-seeking. This project integrates intelligent **AI agents** into the RAG pipeline, yielding remarkably more accurate, robust, and contextually rich responses than traditional RAG.  
 
 ### Brief Technique & Impact
-I developed an **AI agent** (using the `smolagent` package) capable of dynamic decision-making, iterative query reformulation, and intelligent document evaluation. A key contribution is an **optimized parallel processing pipeline** for efficient FAISS-based vector database creation from technical documentation. This framework fundamentally improves LLM output grounding through advanced reasoning and self-correction.  
+I developed an **AI agent** (using the `smolagent` package) capable of dynamic decision-making, iterative query reformulation, and intelligent document evaluation. A key contribution is an **optimized parallel processing pipeline** for efficient FAISS-based vector database creation from technical documentation. This framework fundamentally improves LLM output grounding through advanced reasoning and self-correction.
 
 ### Performance Highlights 
 Evaluated on a technical Q&A dataset, Agentic RAG consistently demonstrated superior accuracy across various LLMs compared to both Standard RAG and standalone LLM performance:
