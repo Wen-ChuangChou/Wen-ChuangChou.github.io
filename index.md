@@ -13,8 +13,8 @@
 Adopting BF16 mixed precision significantly accelerates model performance, yielding up to a 6x increase in inference throughput and enabling the training of larger model architectures that fail with full precision due to memory constraints (Out Of Memory, OOM).
 
 <p align="center">
-  <img src="https://github.com/Wen-ChuangChou/Wen-ChuangChou.github.io/blob/master/images/benchmark_comparison_training.png?raw=true" width="90%" />
-  <img src="https://github.com/Wen-ChuangChou/Wen-ChuangChou.github.io/blob/master/images/benchmark_comparison_inference.png?raw=true" width="90%" />
+  <img src="https://github.com/Wen-ChuangChou/Wen-ChuangChou.github.io/blob/master/images/benchmark_comparison_training.png?raw=true" width="45%" />
+  <img src="https://github.com/Wen-ChuangChou/Wen-ChuangChou.github.io/blob/master/images/benchmark_comparison_inference.png?raw=true" width="45%" />
 </p>
 
 ### Performance Highlights
