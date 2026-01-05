@@ -20,6 +20,9 @@ The benchmarks evaluate a modern decoder-only Transformer, spanning five configu
 ### Performance Highlights
 The benchmarks demonstrate BF16's superior scalability. In inference, the largest 2.7B model achieves a nearly 600% speedup, jumping from 6.6k to 38.6k tokens/second. The small model (128M parameters) sees throughput nearly triple, reaching over 400k tokens/second. Training benefits are equally critical; while the 128M model trains 2.8x faster with BF16, the technique’s true value is unlocking larger architectures. FP32 fails to train the 'large' configuration due to memory limits, whereas BF16 handles it successfully at 24.8k tokens/second, proving essential for resource-constrained high-performance tasks.
 
+### Future Optimizations: Mitigating OOM
+To further resolve memory bottlenecks, future work will integrate **Activation Checkpointing** and **Flash Attention**. These techniques significantly reduce memory usage, and updated benchmarks demonstrating their impact are in progress.
+
 ---
 
 ## AI agent : Agentic Retrieval-Augmented-Generation (RAG)
