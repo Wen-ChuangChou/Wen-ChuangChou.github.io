@@ -37,7 +37,7 @@ In the Transformer self-attention mechanism, we compare two primary operations: 
 Using **PyTorch NVTX annotations** and the **NVIDIA Nsight Systems (`nsys`)** profiler, I isolated these operations during a forward pass on a "Small" model configuration ($S=128, D=64$).
 
 <p align="center">
-  <img src="https://github.com/Wen-ChuangChou/Wen-ChuangChou.github.io/blob/master/images/Timetraces_NsightSystem.png?raw=true" width="100%" />
+  <img src="https://github.com/Wen-ChuangChou/Wen-ChuangChou.github.io/blob/master/images/Timetraces_NsightSystem.png?raw=true" width="75%" />
   <img src="https://github.com/Wen-ChuangChou/Wen-ChuangChou.github.io/blob/master/images/CudaKernel_NsightSystem.png?raw=true" width="100%" />
 </p>
 
