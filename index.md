@@ -37,14 +37,14 @@ In the Transformer self-attention mechanism, we compare two primary operations: 
 Using **PyTorch NVTX annotations** and the **NVIDIA Nsight Systems (`nsys`)** profiler, I isolated these operations during a forward pass on a "Small" model configuration ($S=128, D=64$).
 
 <p align="center">
-  <img src="https://github.com/Wen-ChuangChou/Wen-ChuangChou.github.io/blob/master/images/Timetraces_NsightSystem.png?raw=true" width="50%" />
+  <img src="https://github.com/Wen-ChuangChou/Wen-ChuangChou.github.io/blob/master/images/Timetraces_NsightSystem.png?raw=true" width="100%" />
   <img src="https://github.com/Wen-ChuangChou/Wen-ChuangChou.github.io/blob/master/images/CudaKernel_NsightSystem.png?raw=true" width="100%" />
 </p>
 
 | Metric | Matrix Multiplication | Softmax | Ratio (MatMul/Softmax) |
 | :--- | :--- | :--- | :--- |
 | **Runtime** | 226.06 $\mu s$ | 467.49 $\mu s$ | **~0.48x** |
-| **Theoretical FLOPs** | $2S^2D$ | $5S^2$ | **~25.6x** (at $D=64$) |
+| **Theoretical FLOPs** | $2S^2D$ | $5S^2$ | **~25.6x**<br>(at $D=64$) |
 
 #### The Efficiency Paradox
 The data reveals a striking discrepancy: while MatMul performs **~25.6 times more mathematical work** than Softmax, it completes in **less than half the time**. This paradox highlights the difference between **Compute-Bound** and **Memory-Bound** operations:
