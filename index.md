@@ -25,15 +25,15 @@ To further resolve memory bottlenecks, future work will integrate **Activation C
 
 ---
 
-# Profiling Arithmetic Intensity: MatMul vs. Softmax in Self-Attention
+## Profiling Arithmetic Intensity: MatMul vs. Softmax in Self-Attention
 
-## Theoretical Computational Complexity (FLOPs)
+### Theoretical Computational Complexity (FLOPs)
 In the Transformer self-attention mechanism, we compare two primary operations: **Matrix Multiplication (MatMul)** for score calculation ($QK^T$) and the **Softmax** normalization layer. Let $S$ represent the sequence length and $D$ represent the head dimension.
 
 * **Matrix Multiplication:** Computing the dot product between matrices of size ($S \times D$) and ($D \times S$) results in an ($S \times S$) output. Each element in the output requires a dot product of length $D$ (involving $D$ multiplications and $D$ additions), totaling approximately $2S^2D$ operations.
 * **Softmax:** This operation acts element-wise on the ($S \times S$) attention matrix. It typically involves five operations per element: finding the maximum, subtraction, exponentiation, summation, and division.
 
-## Performance Profiling & Observations
+### Performance Profiling & Observations
 Using **PyTorch NVTX annotations** and the **NVIDIA Nsight Systems (`nsys`)** profiler, I isolated these operations during a forward pass on a "Small" model configuration ($S=128, D=64$).
 
 <p align="center">
@@ -41,18 +41,18 @@ Using **PyTorch NVTX annotations** and the **NVIDIA Nsight Systems (`nsys`)** pr
   <img src="https://github.com/Wen-ChuangChou/Wen-ChuangChou.github.io/blob/master/images/CudaKernel_NsightSystem.png?raw=true" width="100%" />
 </p>
 
-| Metric | Matrix Multiplication (GEMM) | Softmax | Ratio (MatMul/Softmax) |
+| Metric | Matrix Multiplication | Softmax | Ratio (MatMul/Softmax) |
 | :--- | :--- | :--- | :--- |
 | **Runtime** | 226.06 $\mu s$ | 467.49 $\mu s$ | **~0.48x** |
 | **Theoretical FLOPs** | $2S^2D$ | $5S^2$ | **~25.6x** (at $D=64$) |
 
-### The Efficiency Paradox
+#### The Efficiency Paradox
 The data reveals a striking discrepancy: while MatMul performs **~25.6 times more mathematical work** than Softmax, it completes in **less than half the time**. This paradox highlights the difference between **Compute-Bound** and **Memory-Bound** operations:
 
 1.  **MatMul (Compute-Bound):** Leveraging **cuBLAS** and hardware-level **Tensor Cores (XMMA)**, the GPU performs massive parallel calculations on data already loaded into registers. It exhibits high Arithmetic Intensity.
 2.  **Softmax (Memory-Bound):** Because Softmax is implemented as a series of separate CUDA kernels (Reduce, Exp, Add, Div), the GPU must move the ($S \times S$) matrix between VRAM and the cache for every single operation. This constant data movement creates a bottleneck, as memory bandwidth cannot keep up with the processing speed.
 
-## Solution: Fused Kernels
+### Solution: Fused Kernels
 These results demonstrate that "FLOPs" are a poor predictor of actual runtime on modern GPUs. To optimize the Attention layer, one must implement **Fused Kernels**. Fusion allows the GPU to perform all Softmax steps while the data remains in fast Shared Memory, eliminating the costly round-trips to global memory.
 
 ---
