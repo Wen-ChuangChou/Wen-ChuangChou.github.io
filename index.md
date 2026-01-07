@@ -34,7 +34,7 @@ In the Transformer self-attention mechanism, we compare two primary operations: 
 * **Softmax:** This operation acts element-wise on the ($S \times S$) attention matrix. It typically involves five operations per element: finding the maximum, subtraction, exponentiation, summation, and division.
 
 ### Performance Profiling & Observations
-Using **PyTorch NVTX annotations** and the **NVIDIA Nsight Systems (`nsys`)** profiler, I isolated these operations during a forward pass on a "Small" model configuration ($S=128, D=64$).
+Using **PyTorch NVTX annotations** and the **NVIDIA Nsight Systems (`nsys`)** profiler, I isolated these operations during a forward pass in transformer blocks with the configuration $S=128$ and $D=64$.
 
 <p align="center">
   <img src="https://github.com/Wen-ChuangChou/Wen-ChuangChou.github.io/blob/master/images/Timetraces_NsightSystem.png?raw=true" width="75%" />
