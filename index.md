@@ -1,9 +1,34 @@
 # My AI Portfolio
 *Engineering advanced LLMs—from benchmarking and profiling performance to distilling DeepSeek R1.*
 
-* [LLM Benchmarking and Profiling](#performance-benchmarking-fp32-vs-bf16-mixed-precision)
 * [AI Agent](#ai-agent--agentic-retrieval-augmented-generation-rag)
+* [LLM Benchmarking and Profiling](#performance-benchmarking-fp32-vs-bf16-mixed-precision)
 * [LLM/Diffusion Distillation & Fine-Tuning](#distilling-deepseek-r1-for-enhanced-llm-performance)
+
+---
+
+## AI agent : Agentic Retrieval-Augmented-Generation (RAG)
+
+My work on **Agentic RAG** significantly enhances Large Language Model (LLM) performance for complex information-seeking. This project integrates intelligent **AI agents** into the RAG pipeline, yielding remarkably more accurate, robust, and contextually rich responses than traditional RAG.  
+
+### Brief Technique & Impact
+I developed an **AI agent** (using the `smolagent` package) capable of dynamic decision-making, iterative query reformulation, and intelligent document evaluation. A key contribution is an **optimized parallel processing pipeline** for efficient FAISS-based vector database creation from technical documentation. This framework fundamentally improves LLM output grounding through advanced reasoning and self-correction.
+
+### Performance Highlights 
+Evaluated on a technical Q&A dataset, Agentic RAG consistently demonstrated superior accuracy across various LLMs compared to both Standard RAG and standalone LLM performance:
+  
+![RAG_Agentic](/images/RAGvsAgentic.png)
+
+More details can be found in the project repository on [GitHub](https://wen-chuangchou.github.io/Agentic_RAG/).
+
+---
+
+## AI Agent: Tool-Augmented Reasoning on GAIA Benchmark
+
+I developed a tool-augmented AI code agent using the `smolagents` framework to tackle complex, agent-evaluating questions from the GAIA benchmark.  
+This system achieved a **40%** correct answer rate—substantially outperforming GPT-4, which reached **14.4%** under the same conditions.
+
+> **Note:** This project is currently under active development to further improve accuracy and generalization.
 
 ---
 
@@ -54,65 +79,6 @@ The data reveals a striking discrepancy: while MatMul performs **~25.6 times mor
 
 ### Solution: Fused Kernels
 These results demonstrate that "FLOPs" are a poor predictor of actual runtime on modern GPUs. To optimize the Attention layer, one must implement **Fused Kernels**. Fusion allows the GPU to perform all Softmax steps while the data remains in fast Shared Memory, eliminating the costly round-trips to global memory.
-
----
-
-## AI agent : Agentic Retrieval-Augmented-Generation (RAG)
-
-My work on **Agentic RAG** significantly enhances Large Language Model (LLM) performance for complex information-seeking. This project integrates intelligent **AI agents** into the RAG pipeline, yielding remarkably more accurate, robust, and contextually rich responses than traditional RAG.  
-
-### Brief Technique & Impact
-I developed an **AI agent** (using the `smolagent` package) capable of dynamic decision-making, iterative query reformulation, and intelligent document evaluation. A key contribution is an **optimized parallel processing pipeline** for efficient FAISS-based vector database creation from technical documentation. This framework fundamentally improves LLM output grounding through advanced reasoning and self-correction.
-
-### Performance Highlights 
-Evaluated on a technical Q&A dataset, Agentic RAG consistently demonstrated superior accuracy across various LLMs compared to both Standard RAG and standalone LLM performance:
-  
-<div align="center">
-  <table>
-    <thead>
-      <tr>
-        <th align="center">Model</th>
-        <th align="center">Agentic RAG</th>
-        <th align="center">Standard RAG</th>
-        <th align="center">LLM Only</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td align="center">Gemini-1.5-flash</td>
-        <td align="center">91.5%</td>
-        <td align="center">85.4%</td>
-        <td align="center">35.4%</td>
-      </tr>
-      <tr>
-        <td align="center">Gemini-2.0-flash</td>
-        <td align="center">90.8%</td>
-        <td align="center">85.4%</td>
-        <td align="center">64.1%</td>
-      </tr>
-      <tr>
-        <td align="center">Gemini-2.5-flash</td>
-        <td align="center">90.8%</td>
-        <td align="center">86.2%</td>
-        <td align="center">63.8%</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
-<p align="center"><b>All values above are accuracy scores (in %)</b></p>
-
-
-More details can be found in the project repository on [GitHub](https://wen-chuangchou.github.io/Agentic_RAG/).
-
----
-
-## AI Agent: Tool-Augmented Reasoning on GAIA Benchmark
-
-I developed a tool-augmented AI code agent using the `smolagents` framework to tackle complex, agent-evaluating questions from the GAIA benchmark.  
-This system achieved a **40%** correct answer rate—substantially outperforming GPT-4, which reached **14.4%** under the same conditions.
-
-> **Note:** This project is currently under active development to further improve accuracy and generalization.
 
 ---
 
