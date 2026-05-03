@@ -15,13 +15,13 @@ My work on **Agentic RAG** significantly enhances Large Language Model (LLM) per
 I developed an **AI agent** (using the `smolagent` package) capable of dynamic decision-making, iterative query reformulation, and intelligent document evaluation. A key contribution is an **optimized parallel processing pipeline** for efficient FAISS-based vector database creation from technical documentation. This framework fundamentally improves LLM output grounding through advanced reasoning and self-correction.
 
 <p align="center">
-<img src="https://github.com/Wen-ChuangChou/Wen-ChuangChou.github.io/blob/master/images/RAG_vs_Agentic.jpeg?raw=true" width="60%" />
+  <img src="images/RAG_vs_Agentic.jpeg" width="100%" />
 </p>
 
 ### Performance Highlights 
 Evaluated on a technical Q&A dataset, Agentic RAG consistently demonstrated superior accuracy across various LLMs compared to both Standard RAG and standalone LLM performance:
   
-![RAG_Agentic](/images/RAGvsAgentic.png)
+![RAG_Agentic](/images/evaluation_scores.png)
 
 More details can be found in the project repository on [GitHub](https://wen-chuangchou.github.io/Agentic_RAG/).
 
@@ -42,8 +42,8 @@ This system achieved a **40%** correct answer rate—substantially outperforming
 The benchmarks evaluate a modern decoder-only Transformer, spanning five configurations from a "Small" base (12 layers, 768 hidden dimension) up to a 2.7B parameter model. Adopting BF16 mixed precision boosts inference throughput up to 6x and enables training larger, memory-intensive architectures that otherwise fail with full precision due to Out-of-Memory (OOM) constraints.
 
 <p align="center">
-  <img src="https://github.com/Wen-ChuangChou/Wen-ChuangChou.github.io/blob/master/images/benchmark_comparison_training.png?raw=true" width="49%" />
-  <img src="https://github.com/Wen-ChuangChou/Wen-ChuangChou.github.io/blob/master/images/benchmark_comparison_inference.png?raw=true" width="49%" />
+  <img src="images/benchmark_comparison_training.png" width="49%" />
+  <img src="images/benchmark_comparison_inference.png" width="49%" />
 </p>
 
 ### Performance Highlights
@@ -66,8 +66,8 @@ In the Transformer self-attention mechanism, we compare two primary operations: 
 Using **PyTorch NVTX annotations** and the **NVIDIA Nsight Systems** profiler, I isolated these operations during a forward pass in transformer blocks with the configuration $S=128$ and $D=64$.
 
 <p align="center">
-  <img src="https://github.com/Wen-ChuangChou/Wen-ChuangChou.github.io/blob/master/images/Timetraces_NsightSystem.png?raw=true" width="75%" />
-  <img src="https://github.com/Wen-ChuangChou/Wen-ChuangChou.github.io/blob/master/images/CudaKernel_NsightSystem.png?raw=true" width="100%" />
+  <img src="images/Timetraces_NsightSystem.png" width="75%" />
+  <img src="images/CudaKernel_NsightSystem.png" width="100%" />
 </p>
 
 | Metric | Matrix Multiplication | Softmax | Ratio (MatMul/Softmax) |
