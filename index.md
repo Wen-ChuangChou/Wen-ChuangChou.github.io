@@ -14,6 +14,10 @@ My work on **Agentic RAG** significantly enhances Large Language Model (LLM) per
 ### Brief Technique & Impact
 I developed an **AI agent** (using the `smolagent` package) capable of dynamic decision-making, iterative query reformulation, and intelligent document evaluation. A key contribution is an **optimized parallel processing pipeline** for efficient FAISS-based vector database creation from technical documentation. This framework fundamentally improves LLM output grounding through advanced reasoning and self-correction.
 
+<p align="center">
+<img src="https://github.com/Wen-ChuangChou/Wen-ChuangChou.github.io/blob/master/images/RAG_vs_Agentic.jpeg?raw=true" width="60%" />
+</p>
+
 ### Performance Highlights 
 Evaluated on a technical Q&A dataset, Agentic RAG consistently demonstrated superior accuracy across various LLMs compared to both Standard RAG and standalone LLM performance:
   
@@ -59,7 +63,7 @@ In the Transformer self-attention mechanism, we compare two primary operations: 
 * **Softmax:** This operation acts element-wise on the ($S \times S$) attention matrix. It typically involves five operations per element: finding the maximum, subtraction, exponentiation, summation, and division.
 
 ### Performance Profiling & Observations
-Using **PyTorch NVTX annotations** and the **NVIDIA Nsight Systems (`nsys`)** profiler, I isolated these operations during a forward pass in transformer blocks with the configuration $S=128$ and $D=64$.
+Using **PyTorch NVTX annotations** and the **NVIDIA Nsight Systems** profiler, I isolated these operations during a forward pass in transformer blocks with the configuration $S=128$ and $D=64$.
 
 <p align="center">
   <img src="https://github.com/Wen-ChuangChou/Wen-ChuangChou.github.io/blob/master/images/Timetraces_NsightSystem.png?raw=true" width="75%" />
@@ -84,7 +88,7 @@ These results demonstrate that "FLOPs" are a poor predictor of actual runtime on
 
 ## Distilling DeepSeek R1 for Enhanced LLM Performance
 
-This project showcases a successful methodology for significantly enhancing large language model performance through advanced **fine-tuning** in a distributed HPC environment.
+This project showcases a successful methodology for significantly enhancing large language model performance through advanced **post-training** in a distributed HPC environment.
 
 ### Brief Technique & Impact
 
@@ -92,7 +96,7 @@ This work focused on post-training weaker LLMs by fine-tuning the Qwen2.5 model 
 
 ### Performance Highlights
 
-The rigorous fine-tuning process yielded substantial gains, boosting the Qwen2.5-Math-7B-Instruct model's `pass@1` accuracy on the AIME 2024 benchmark from 13.3% to a remarkable **56.7%**, and on GPQA Diamond from 28.3% to **54.5%**. This demonstrates the effectiveness of the distilled data approach in bringing weaker LLMs closer to DeepSeek R1's performance.
+The rigorous post-training process yielded substantial gains, boosting the Qwen2.5-Math-7B-Instruct model's `pass@1` accuracy on the AIME 2024 benchmark from 13.3% to a remarkable **56.7%**, and on GPQA Diamond from 28.3% to **54.5%**. This demonstrates the effectiveness of the distilled data approach in bringing weaker LLMs closer to DeepSeek R1's performance.
 
 <div align="center">
 
