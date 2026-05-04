@@ -27,6 +27,26 @@ More details can be found in the project repository on [GitHub](https://wen-chua
 
 ---
 
+## Agentic RAG with Colocated vLLM Inference
+
+This project evaluates Agentic RAG, traditional RAG, and standalone LLM systems on complex technical queries. All inference is successfully moved from remote APIs to a GPU cluster with colocated vLLM serving, ensuring zero-egress data sovereignty.
+
+### Brief Technique & Impact
+The framework introduces a dynamic agent-based approach for iterative query refinement using `smolagents`. It runs a three-phase hybrid pipeline combining offline batching and an asynchronous server. This design maximizes GPU utilization and enables concurrent multi-step reasoning, drastically reducing latency compared to traditional API-limited regimes to deliver highly efficient, robust answers.
+
+<p align="center">
+  <img src="images/api_vs_vllm.png" width="100%" />
+</p>
+
+### Performance Highlights 
+Deploying concurrent Agentic RAG queries on a local vLLM server collapses latency by an order of magnitude. Concurrency and batching transform API-limited pipelines into highly practical, compute-efficient, high-throughput local systems.
+![API and vLLM Time Comparison](/images/time_comparison.png)
+
+
+More details can be found in the project repository on [GitHub](https://github.com/Wen-ChuangChou/Agentic-RAG-vLLM-inference).
+
+---
+
 ## AI Agent: Tool-Augmented Reasoning on GAIA Benchmark
 
 I developed a tool-augmented AI code agent using the `smolagents` framework to tackle complex, agent-evaluating questions from the GAIA benchmark.  
