@@ -1,246 +1,60 @@
 # My AI Portfolio
-*Engineering advanced LLMs—from benchmarking and profiling performance to distilling DeepSeek R1.*
+*Engineering advanced AI systems—from autonomous multi-agent systems and scaling reasoning-focused LLMs on multi-node GPU clusters to performance profiling and distilling DeepSeek R1.*
 
-* [AI Agent](#ai-agent--agentic-retrieval-augmented-generation-rag)
-* [LLM Benchmarking and Profiling](#performance-benchmarking-fp32-vs-bf16-mixed-precision)
-* [LLM/Diffusion Distillation & Fine-Tuning](#distilling-deepseek-r1-for-enhanced-llm-performance)
+* [AI Agent](./ai-agent)
+* [LLM Benchmarking and Profiling](./benchmarking)
+* [LLM/Diffusion Distillation & Fine-Tuning](./distillation-finetuning)
 
 ---
 
-## AI agent : Agentic Retrieval-Augmented-Generation (RAG)
+## [AI Agent](./ai-agent)
 
-My work on **Agentic RAG** significantly enhances Large Language Model (LLM) performance for complex information-seeking. This project integrates intelligent **AI agents** into the RAG pipeline, yielding remarkably more accurate, robust, and contextually rich responses than traditional RAG.  
-
-### Brief Technique & Impact
-I developed an **AI agent** (using the `smolagent` package) capable of dynamic decision-making, iterative query reformulation, and intelligent document evaluation. A key contribution is an **optimized parallel processing pipeline** for efficient FAISS-based vector database creation from technical documentation. This framework fundamentally improves LLM output grounding through advanced reasoning and self-correction.
+Building intelligent **AI agents** that dynamically reason, retrieve, and self-correct—from Agentic RAG with colocated vLLM inference to tool-augmented reasoning on the GAIA benchmark.
 
 <p align="center">
   <img src="images/RAG_vs_Agentic.jpeg" width="100%" />
 </p>
 
-### Performance Highlights 
-Evaluated on a technical Q&A dataset, Agentic RAG consistently demonstrated superior accuracy across various LLMs compared to both Standard RAG and standalone LLM performance:
-  
-![RAG_Agentic](/images/evaluation_scores.png)
+**Key projects:**
+- **Agentic RAG** — Agent-based retrieval with iterative query refinement, achieving superior accuracy over Standard RAG and standalone LLMs. [Details →](./ai-agent#agentic-retrieval-augmented-generation-rag)
+- **Colocated vLLM Inference** — Zero-egress, GPU-cluster deployment with a three-phase hybrid pipeline that collapses latency by an order of magnitude. [Details →](./ai-agent#agentic-rag-with-colocated-vllm-inference)
+- **GAIA Benchmark** — Tool-augmented code agent achieving **40%** accuracy, outperforming GPT-4's **14.4%**. [Details →](./ai-agent#ai-agent-tool-augmented-reasoning-on-gaia-benchmark)
 
-More details can be found in the project repository on [GitHub](https://wen-chuangchou.github.io/Agentic_RAG/).
-
----
-
-## Agentic RAG with Colocated vLLM Inference
-
-This project evaluates Agentic RAG, traditional RAG, and standalone LLM systems on complex technical queries. All inference is successfully moved from remote APIs to a GPU cluster with colocated vLLM serving, ensuring zero-egress data sovereignty.
-
-### Brief Technique & Impact
-The framework introduces a dynamic agent-based approach for iterative query refinement using `smolagents`. It runs a three-phase hybrid pipeline combining offline batching and an asynchronous server. This design maximizes GPU utilization and enables concurrent multi-step reasoning, drastically reducing latency compared to traditional API-limited regimes to deliver highly efficient, robust answers.
-
-<p align="center">
-  <img src="images/api_vs_vllm.png" width="100%" />
-</p>
-
-### Performance Highlights 
-Deploying concurrent Agentic RAG queries on a local vLLM server collapses latency by an order of magnitude. Concurrency and batching transform API-limited pipelines into highly practical, compute-efficient, high-throughput local systems.
-![API and vLLM Time Comparison](/images/time_comparison.png)
-
-
-More details can be found in the project repository on [GitHub](https://github.com/Wen-ChuangChou/Agentic-RAG-vLLM-inference).
+[Explore all AI Agent projects →](./ai-agent)
 
 ---
 
-## AI Agent: Tool-Augmented Reasoning on GAIA Benchmark
+## [LLM Benchmarking and Profiling](./benchmarking)
 
-I developed a tool-augmented AI code agent using the `smolagents` framework to tackle complex, agent-evaluating questions from the GAIA benchmark.  
-This system achieved a **40%** correct answer rate—substantially outperforming GPT-4, which reached **14.4%** under the same conditions.
-
-> **Note:** This project is currently under active development to further improve accuracy and generalization.
-
----
-
-## Performance Benchmarking: FP32 vs. BF16 Mixed Precision
-
-### Brief Technique & Impact 
-The benchmarks evaluate a modern decoder-only Transformer, spanning five configurations from a "Small" base (12 layers, 768 hidden dimension) up to a 2.7B parameter model. Adopting BF16 mixed precision boosts inference throughput up to 6x and enables training larger, memory-intensive architectures that otherwise fail with full precision due to Out-of-Memory (OOM) constraints.
+Systematic performance analysis of Transformer architectures—benchmarking FP32 vs. BF16 mixed precision and profiling compute- vs. memory-bound operations in self-attention.
 
 <p align="center">
   <img src="images/benchmark_comparison_training.png" width="49%" />
   <img src="images/benchmark_comparison_inference.png" width="49%" />
 </p>
 
-### Performance Highlights
-The benchmarks demonstrate BF16's superior scalability. In inference, the largest 2.7B model achieves a nearly 600% speedup, jumping from 6.6k to 38.6k tokens/second. The small model (128M parameters) sees throughput nearly triple, reaching over 400k tokens/second. Training benefits are equally critical; while the 128M model trains 2.8x faster with BF16, the technique’s true value is unlocking larger architectures. FP32 fails to train the 'large' configuration due to memory limits, whereas BF16 handles it successfully at 24.8k tokens/second, proving essential for resource-constrained high-performance tasks.
+**Key projects:**
+- **FP32 vs. BF16 Benchmarking** — BF16 mixed precision delivers up to **6× inference throughput** and unlocks training of larger architectures that fail under FP32. [Details →](./benchmarking#performance-benchmarking-fp32-vs-bf16-mixed-precision)
+- **Arithmetic Intensity Profiling** — Reveals why MatMul completes in half the time of Softmax despite **25.6× more FLOPs**, demonstrating the compute-bound vs. memory-bound paradigm. [Details →](./benchmarking#profiling-arithmetic-intensity-matmul-vs-softmax-in-self-attention)
 
-### Future Optimizations: Mitigating OOM
-To further resolve memory bottlenecks, future work will integrate **Activation Checkpointing** and **Flash Attention**. These techniques significantly reduce memory usage, and updated benchmarks demonstrating their impact are in progress.
+[Explore all Benchmarking projects →](./benchmarking)
 
 ---
 
-## Profiling Arithmetic Intensity: MatMul vs. Softmax in Self-Attention
+## [LLM/Diffusion Distillation & Fine-Tuning](./distillation-finetuning)
 
-### Theoretical Computational Complexity (FLOPs)
-In the Transformer self-attention mechanism, we compare two primary operations: **Matrix Multiplication (MatMul)** for score calculation ($QK^T$) and the **Softmax** normalization layer. Let $S$ represent the sequence length and $D$ represent the head dimension.
-
-* **Matrix Multiplication:** Computing the dot product between matrices of size ($S \times D$) and ($D \times S$) results in an ($S \times S$) output. Each element in the output requires a dot product of length $D$ (involving $D$ multiplications and $D$ additions), totaling approximately $2S^2D$ operations.
-* **Softmax:** This operation acts element-wise on the ($S \times S$) attention matrix. It typically involves five operations per element: finding the maximum, subtraction, exponentiation, summation, and division.
-
-### Performance Profiling & Observations
-Using **PyTorch NVTX annotations** and the **NVIDIA Nsight Systems** profiler, I isolated these operations during a forward pass in transformer blocks with the configuration $S=128$ and $D=64$.
+Advanced post-training and fine-tuning across LLMs and diffusion models—from distilling DeepSeek R1 on multi-node HPC to LoRA-adapted Stable Diffusion.
 
 <p align="center">
-  <img src="images/Timetraces_NsightSystem.png" width="75%" />
-  <img src="images/CudaKernel_NsightSystem.png" width="100%" />
+  <img src="https://github.com/Wen-ChuangChou/sentiment_analysis/blob/main/pic/radarplot.png?raw=true" alt="Radar plot" width="400"/>
 </p>
 
-| Metric | Matrix Multiplication | Softmax | Ratio (MatMul/Softmax) |
-| :--- | :--- | :--- | :--- |
-| **Runtime** | 226.06 $\mu s$ | 467.49 $\mu s$ | **~0.48x** |
-| **Theoretical FLOPs** | $2S^2D$ | $5S^2$ | **~25.6x**<br>(at $D=64$) |
+**Key projects:**
+- **DeepSeek R1 Distillation** — Boosted Qwen2.5-Math-7B accuracy from 13.3% to **56.7%** on AIME 2024 via SFT + GRPO across 8 H100 GPUs. [Details →](./distillation-finetuning#distilling-deepseek-r1-for-enhanced-llm-performance)
+- **Llama 3 Sentiment Analysis** — Fine-tuned Llama 3.1–8B achieving **81.49%** accuracy on MTEB tweet sentiment. [Details →](./distillation-finetuning#fine-tuning-llama-3-for-sentiment-analysis)
+- **Stable Diffusion LoRA** — Fine-tuned SD v2 with LoRA for Naruto-style generation, with **77% training time reduction** via multi-GPU. [Details →](./distillation-finetuning#fine-tuning-stable-diffusion-with-lora)
+- **Bike Traffic Prediction** — Graph Attention Networks for urban traffic forecasting; **2nd place** at BTW 2023. [Details →](./distillation-finetuning#predicting-bike-traffic)
+- **Speaker Identification** — Transformer/Conformer encoders achieving **91.8%** accuracy. [Details →](./distillation-finetuning#speaker-identification)
+- **Anime Face Generator** — Diffusion probabilistic model trained on 71k anime faces. [Details →](./distillation-finetuning#anime-face-generator)
 
-#### The Efficiency Paradox
-The data reveals a striking discrepancy: while MatMul performs **~25.6 times more mathematical work** than Softmax, it completes in **less than half the time**. This paradox highlights the difference between **Compute-Bound** and **Memory-Bound** operations:
-
-1.  **MatMul (Compute-Bound):** Leveraging **cuBLAS** and hardware-level **Tensor Cores (XMMA)**, the GPU performs massive parallel calculations on data already loaded into registers. It exhibits high Arithmetic Intensity.
-2.  **Softmax (Memory-Bound):** Because Softmax is implemented as a series of separate CUDA kernels (Reduce, Exp, Add, Div), the GPU must move the ($S \times S$) matrix between VRAM and the cache for every single operation. This constant data movement creates a bottleneck, as memory bandwidth cannot keep up with the processing speed.
-
-### Solution: Fused Kernels
-These results demonstrate that "FLOPs" are a poor predictor of actual runtime on modern GPUs. To optimize the Attention layer, one must implement **Fused Kernels**. Fusion allows the GPU to perform all Softmax steps while the data remains in fast Shared Memory, eliminating the costly round-trips to global memory.
-
----
-
-## Distilling DeepSeek R1 for Enhanced LLM Performance
-
-This project showcases a successful methodology for significantly enhancing large language model performance through advanced **post-training** in a distributed HPC environment.
-
-### Brief Technique & Impact
-
-This work focused on post-training weaker LLMs by fine-tuning the Qwen2.5 model using high-quality data distilled from DeepSeek R1. Employing Supervised Fine-Tuning (SFT) and Group Relative Policy Optimization (GRPO) techniques across **8 H100 GPUs** distributed over **2 HPC nodes**, a key aspect of this project involved learning, optimizing, and simplifying the deployment of the training workflow for common HPC setups.
-
-### Performance Highlights
-
-The rigorous post-training process yielded substantial gains, boosting the Qwen2.5-Math-7B-Instruct model's `pass@1` accuracy on the AIME 2024 benchmark from 13.3% to a remarkable **56.7%**, and on GPQA Diamond from 28.3% to **54.5%**. This demonstrates the effectiveness of the distilled data approach in bringing weaker LLMs closer to DeepSeek R1's performance.
-
-<div align="center">
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:center;">Model</th>
-      <th style="text-align:center;">AIME 2024<br>pass@1</th>
-      <th style="text-align:center;">MATH-500<br>pass@1</th>
-      <th style="text-align:center;">GPQA Diamond<br>pass@1</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:center;">Qwen2.5-Math-7B-Instruct<br> (Original)</td>
-      <td style="text-align:center;">13.3</td>
-      <td style="text-align:center;">80.2</td>
-      <td style="text-align:center;">28.3</td>
-    </tr>
-    <tr>
-      <td style="text-align:center;">Qwen2.5-Math-7B-Instruct<br>(Fine-tuned on DeepSeek R1 distilled data)</td>
-      <td style="text-align:center;">56.7</td>
-      <td style="text-align:center;">89.8</td>
-      <td style="text-align:center;">54.5</td>
-    </tr>
-    <tr>
-      <td style="text-align:center;">DeepSeek-R1-Distill-Qwen-7B (Teacher)</td>
-      <td style="text-align:center;">53.3</td>
-      <td style="text-align:center;">93.2</td>
-      <td style="text-align:center;">53.0</td>
-    </tr>
-  </tbody>
-</table>
-
-</div>
-
-More details can be found in the project repository on [GitHub](https://wen-chuangchou.github.io/Open-R1/).<br><br> 
-
----
-
-## Fine-Tuning Llama 3 for Sentiment Analysis
-
-This project fine-tunes **Llama 3.1–8B Instruct** to perform sentiment classification on short-form text, such as tweets. The model learns to identify sentiments—**positive**, **neutral**, or **negative**—using the `tweet_sentiment_extraction` subset from the **MTEB benchmark**.
-
-### Technique & Impact
-
-Using instruction-style prompts and a streamlined training pipeline, the model was fine-tuned to produce accurate, single-word sentiment predictions. This significantly improved performance and makes the model well-suited for real-world applications like social media monitoring and customer feedback analysis.
-
-### Performance Highlights
-
-On the MTEB tweet sentiment test set, the fine-tuned model achieved a notable accuracy gain:
-
-<p align="center"><b>Accuracy on MTEB Tweet Sentiment Classification</b></p>
-
-| **Model**                 | **Accuracy (%)** |
-|:-------------------------:|:----------------:|
-| Llama 3.1–8B (zero-shot)  |      63.41        |
-| Llama 3.1–8B (fine-tuned) |    **81.49**      |
-
-<p align="center">
-  <img src="https://github.com/Wen-ChuangChou/sentiment_analysis/blob/main/pic/radarplot.png?raw=true" alt="Radar plot showing model performance" width="400"/>
-</p>
-
-More details can be found in the project repository on [GitHub](https://wen-chuangchou.github.io/Sentiment-Analysis/).
-
----
-## Fine-Tuning Stable Diffusion with LoRA
-
-This project fine-tunes **Stable Diffusion v2** (by Stability AI) using the **Hugging Face Diffusers** library to generate images in a customized visual style—in this case, the Naruto anime aesthetic.
-
-### Technique & Impact
-
-The fine-tuning was performed using **LoRA** (Low-Rank Adaptation), which adapts pretrained diffusion models by inserting trainable low-rank matrices into existing weights, significantly reducing memory and compute requirements. The process was accelerated using **8× H100 GPUs** across **2 HPC nodes**, achieving a **77% reduction in training time** compared to single-GPU training.
-
-We used the [`lambdalabs/naruto-blip-captions`](https://huggingface.co/datasets/lambdalabs/naruto-blip-captions) dataset to teach the model the distinct visual characteristics of Naruto anime.
-
-#### Dataset Examples
-
-
-<p float="left" align="center">
-  <img src="https://github.com/Wen-ChuangChou/stable-diffusion-fine-tuning/raw/main/images/naruto_image1.jpg" alt="Naruto Example 1" width="220"/>
-  &nbsp;
-  <img src="https://github.com/Wen-ChuangChou/stable-diffusion-fine-tuning/raw/main/images/naruto_image2.jpg" alt="Naruto Example 2" width="220"/>
-</p>
-
-### Performance Highlights
-
-**Prompt:**  
-*A detailed portrait of Hello Kitty, rendered in the style of Naruto anime, with a blue background.*
-
-| Model                     | Output Example |
-|:--------------------------:|:----------------:|
-| **Base Stable Diffusion** | <img src="https://github.com/Wen-ChuangChou/stable-diffusion-fine-tuning/raw/main/images/Hello_Kitty_naruto_base.png" alt="Base SD" width="220"/> |
-| **LoRA Fine-Tuned Model** | <img src="https://github.com/Wen-ChuangChou/stable-diffusion-fine-tuning/raw/main/images/Hello_Kitty_lora.png" alt="LoRA Output 1" width="220"/> <img src="https://github.com/Wen-ChuangChou/stable-diffusion-fine-tuning/raw/main/images/Hello_Kitty_lora2.png" alt="LoRA Output 2" width="220"/> |
-
-The base model fails to capture Naruto's stylistic elements, while the fine-tuned model successfully generates images in the correct anime style.
-
-> **Note:** This project is currently under active development to further improve accuracy and generalization.
-
----
-
-## Predicting Bike Traffic  
-I implemented **Graph Attention Networks** to predict bike traffic volume using social and environmental data. The models were trained separately on datasets from Dresden, Leipzig, and Hamburg. The following plot illustrates the results across the three cities:
-
-<p align="center">
-<img src="https://github.com/Wen-ChuangChou/Predict-Bike-Traffic/blob/main/doc/fig/prediction.png?raw=true" alt="prediction" width="700"/>
-</p>
-
-This project won **second place** in the data science challenge at BTW 2023. More details are available on [GitHub](https://wen-chuangchou.github.io/Predict-Bike-Traffic/).<br><br>  
-
----
-
-## Speaker Identification  
-I developed a speaker identification system using **Transformer and Conformer encoders**, improving accuracy from **53.94% to 91.8%** on a validation dataset of 56,666 voice recordings. More details are available on [GitHub](https://wen-chuangchou.github.io/Speaker-identification/).<br><br>  
-
----
-
-## Anime Face Generator  
-Using a dataset of approximately 71,000 anime face images, I trained a **diffusion probabilistic model** to generate anime-style portraits. The generative network improved significantly over training iterations, as shown in the images below:  
-
-After 1,000 iterations (left) vs. 20,000 iterations (right):
-<p align="center">
-<img src="https://github.com/Wen-ChuangChou/Anime-face-generator/blob/main/doc/fig/1000iterations.png?raw=true" alt="1000" width="220"/>
- <img src="https://github.com/Wen-ChuangChou/Anime-face-generator/blob/main/doc/fig/20000iterations.png?raw=true" alt="20000" width="220"/> 
-</p>
-
-More details are available on [GitHub](https://wen-chuangchou.github.io/Anime-face-generator/).  
+[Explore all Distillation & Fine-Tuning projects →](./distillation-finetuning)
