@@ -18,7 +18,7 @@ Building intelligent **AI agents** that dynamically reason, retrieve, and self-c
 **Key projects:**
 - **Agentic RAG** — Agent-based retrieval with iterative query refinement, achieving superior accuracy over Standard RAG and standalone LLMs. [Details →](./ai-agent#agentic-retrieval-augmented-generation-rag)
 - **Colocated vLLM Inference** — Zero-egress, GPU-cluster deployment with a three-phase hybrid pipeline that collapses latency by an order of magnitude. [Details →](./ai-agent#agentic-rag-with-colocated-vllm-inference)
-- **AI Multi-Agent Orchestration** — Hierarchical `smolagents` framework with Langfuse telemetry; achieves **60%** accuracy on GAIA benchmark, outperforming GPT-4's 14.4% baseline. [Details →](./ai-agent#ai-agent-tool-augmented-reasoning-on-gaia-benchmark)
+- **AI Multi-Agent Orchestration** — Hierarchical `smolagents` framework with Langfuse telemetry; achieves **60%** accuracy on GAIA benchmark, outperforming GPT-4's 14.4% baseline. [Details →](./ai-agent#autonomous-multi-agent-orchestration-gaia-benchmark)
 
 [Explore all AI Agent projects →](./ai-agent)
 
