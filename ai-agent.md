@@ -48,7 +48,15 @@ More details can be found in the project repository on [GitHub](https://github.c
 
 ## AI Agent: Tool-Augmented Reasoning on GAIA Benchmark
 
-I developed a tool-augmented AI code agent using the `smolagents` framework to tackle complex, agent-evaluating questions from the GAIA benchmark.  
-This system achieved a **40%** correct answer rate—substantially outperforming GPT-4, which reached **14.4%** under the same conditions.
+This project implements an advanced autonomous agent system designed to tackle the GAIA (General AI Assistants) benchmark. Unlike traditional chatbots, this agent utilizes a multi-agent orchestration framework to solve complex, multi-modal tasks that require reasoning.
 
-> **Note:** This project is currently under active development to further improve accuracy and generalization.
+### Brief Technique & Impact
+Built on the smolagents framework, the system features a hierarchical structure where a Manager Agent coordinates specialized search and vision agents. By delegating data retrieval, it reduces token usage and bypasses access blocks via custom API integration. It features full integration with **Langfuse** via OpenTelemetry for granular monitoring of agent steps and performance.
+
+![Multi Agents](/images/multi_agent.png)
+
+
+### Performance Highlights
+The agent achieved a 60% accuracy rate on the GAIA benchmark, significantly outperforming GPT-4's 14.4% baseline. It leverages dynamic Python-based reasoning and full Langfuse observability to autonomously navigate the web and analyze complex multi-modal datasets.
+
+More details can be found in the project repository on [GitHub](https://github.com/Wen-ChuangChou/Multi-Agent-GAIA).
