@@ -57,6 +57,6 @@ Built on the smolagents framework, the system features a hierarchical structure 
 
 
 ### Performance Highlights
-The agent achieved a **60%** accuracy rate on the GAIA benchmark, significantly outperforming GPT-4's 14.4% baseline. It leverages dynamic Python-based reasoning and full Langfuse observability to autonomously navigate the web and analyze complex multi-modal datasets.
+The agent achieved a **80%** accuracy rate on the GAIA benchmark, significantly outperforming GPT-4's 14.4% baseline. It leverages dynamic Python-based reasoning and full Langfuse observability to autonomously navigate the web and analyze complex multi-modal datasets.
 
 More details can be found in the project repository on [GitHub](https://github.com/Wen-ChuangChou/Multi-Agent-GAIA).
