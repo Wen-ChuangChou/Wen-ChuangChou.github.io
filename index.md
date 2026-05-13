@@ -1,13 +1,13 @@
 # My AI Portfolio
 *Engineering advanced AI systems—from autonomous multi-agent systems and scaling reasoning-focused LLMs on multi-node GPU clusters to performance profiling and distilling DeepSeek R1.*
 
-* [AI Agent](./ai-agent)
-* [LLM Benchmarking and Profiling](./benchmarking)
-* [LLM/Diffusion Distillation & Fine-Tuning](./distillation-finetuning)
+* [AI Agent](./ai-agent.md)
+* [LLM Benchmarking and Profiling](./benchmarking.md)
+* [LLM/Diffusion Distillation & Fine-Tuning](./distillation-finetuning.md)
 
 ---
 
-## [AI Agent](./ai-agent)
+## [AI Agent](./ai-agent.md)
 
 Building intelligent **AI agents** that dynamically reason, retrieve, and self-correct—from Agentic RAG with colocated vLLM inference to tool-augmented reasoning on the GAIA benchmark.
 
@@ -24,7 +24,7 @@ Building intelligent **AI agents** that dynamically reason, retrieve, and self-c
 
 ---
 
-## [LLM Benchmarking and Profiling](./benchmarking)
+## [LLM Benchmarking and Profiling](./benchmarking.md)
 
 Systematic performance analysis of Transformer architectures—benchmarking FP32 vs. BF16 mixed precision and profiling compute- vs. memory-bound operations in self-attention.
 
@@ -37,11 +37,11 @@ Systematic performance analysis of Transformer architectures—benchmarking FP32
 - **FP32 vs. BF16 Benchmarking** — BF16 mixed precision delivers up to **6× inference throughput** and unlocks training of larger architectures that fail under FP32. [Details →](./benchmarking#performance-benchmarking-fp32-vs-bf16-mixed-precision)
 - **Arithmetic Intensity Profiling** — Reveals why MatMul completes in half the time of Softmax despite **25.6× more FLOPs**, demonstrating the compute-bound vs. memory-bound paradigm. [Details →](./benchmarking#profiling-arithmetic-intensity-matmul-vs-softmax-in-self-attention)
 
-[Explore all Benchmarking projects →](./benchmarking)
+[Explore all Benchmarking projects →](./benchmarking.md)
 
 ---
 
-## [LLM/Diffusion Distillation & Fine-Tuning](./distillation-finetuning)
+## [LLM/Diffusion Distillation & Fine-Tuning](./distillation-finetuning.md)
 
 Advanced post-training and fine-tuning across LLMs and diffusion models—from distilling DeepSeek R1 on multi-node HPC to LoRA-adapted Stable Diffusion.
 
@@ -57,4 +57,4 @@ Advanced post-training and fine-tuning across LLMs and diffusion models—from d
 - **Speaker Identification** — Transformer/Conformer encoders achieving **91.8%** accuracy. [Details →](./distillation-finetuning#speaker-identification)
 - **Anime Face Generator** — Diffusion probabilistic model trained on 71k anime faces. [Details →](./distillation-finetuning#anime-face-generator)
 
-[Explore all Distillation & Fine-Tuning projects →](./distillation-finetuning)
+[Explore all Distillation & Fine-Tuning projects →](./distillation-finetuning.md)

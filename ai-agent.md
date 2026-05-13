@@ -18,7 +18,7 @@ I developed an **AI agent** (using the `smolagent` package) capable of dynamic d
 ### Performance Highlights 
 Evaluated on a technical Q&A dataset, Agentic RAG consistently demonstrated superior accuracy across various LLMs compared to both Standard RAG and standalone LLM performance:
   
-![RAG_Agentic](/images/evaluation_scores.png)
+![RAG_Agentic](images/evaluation_scores.png)
 
 More details can be found in the project repository on [GitHub](https://wen-chuangchou.github.io/Agentic_RAG/).
 
@@ -38,11 +38,11 @@ The framework introduces a dynamic agent-based approach for iterative query refi
 ### Performance Highlights 
 Deploying concurrent Agentic RAG queries on a local vLLM server collapses latency by an order of magnitude. Concurrency and batching transform API-limited pipelines into highly practical, compute-efficient, high-throughput local systems.
 
-![API and vLLM Time Comparison](/images/time_comparison.png)
+![API and vLLM Time Comparison](images/time_comparison.png)
 *Note: Lower inference times indicate superior system efficiency.*
 
 
-More details can be found in the project repository on [GitHub](https://github.com/Wen-ChuangChou/Agentic-RAG-vLLM-inference).
+More details can be found in the project repository on [GitHub](https://wen-chuangchou.github.io/Agentic-RAG-vLLM-inference/).
 
 ---
 
@@ -53,10 +53,10 @@ This project implements an advanced autonomous agent system designed to tackle t
 ### Brief Technique & Impact
 Built on the smolagents framework, the system features a hierarchical structure where a Manager Agent coordinates specialized search and vision agents. By delegating data retrieval, it reduces token usage and bypasses access blocks via custom API integration. It features full integration with **Langfuse** via OpenTelemetry for granular monitoring of agent steps and performance.
 
-![Multi Agents](/images/multi_agent.png)
+![Multi Agents](images/multi_agent.png)
 
 
 ### Performance Highlights
 The agent achieved a **80%** accuracy rate on the GAIA benchmark, significantly outperforming GPT-4's 14.4% baseline. It leverages dynamic Python-based reasoning and full Langfuse observability to autonomously navigate the web and analyze complex multi-modal datasets.
 
-More details can be found in the project repository on [GitHub](https://github.com/Wen-ChuangChou/Multi-Agent-GAIA).
+More details can be found in the project repository on [GitHub](https://wen-chuangchou.github.io/Multi-Agent-GAIA/).
