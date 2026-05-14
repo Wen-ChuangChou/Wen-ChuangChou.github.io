@@ -3,7 +3,8 @@
 
 * [AI Agent](./ai-agent.md)
 * [LLM Benchmarking and Profiling](./benchmarking.md)
-* [LLM/Diffusion Distillation & Fine-Tuning](./distillation-finetuning.md)
+* [LLM Distillation & Fine-Tuning](./distillation-finetuning.md)
+* [Generative AI & Applied Machine Learning](./applied-ml.md)
 
 ---
 
@@ -41,20 +42,36 @@ Systematic performance analysis of Transformer architectures—benchmarking FP32
 
 ---
 
-## [LLM/Diffusion Distillation & Fine-Tuning](./distillation-finetuning.md)
+## [LLM Distillation & Fine-Tuning](./distillation-finetuning.md)
 
-Advanced post-training and fine-tuning across LLMs and diffusion models—from distilling DeepSeek R1 on multi-node HPC to LoRA-adapted Stable Diffusion.
+Advanced post-training and fine-tuning across large language models—from distilling DeepSeek R1 on multi-node HPC to instruction-tuning Llama 3.
 
 <p align="center">
-  <img src="https://github.com/Wen-ChuangChou/sentiment_analysis/blob/main/pic/radarplot.png?raw=true" alt="Radar plot" width="400"/>
+  <img src="https://github.com/Wen-ChuangChou/sentiment_analysis/blob/main/pic/radarplot.png?raw=true" alt="Radar plot" width="300"/>
 </p>
 
 **Key projects:**
 - **DeepSeek R1 Distillation** — Boosted Qwen2.5-Math-7B accuracy from 13.3% to **56.7%** on AIME 2024 via SFT + GRPO across 8 H100 GPUs. [Details →](./distillation-finetuning#distilling-deepseek-r1-for-enhanced-llm-performance)
 - **Llama 3 Sentiment Analysis** — Fine-tuned Llama 3.1–8B achieving **81.49%** accuracy on MTEB tweet sentiment. [Details →](./distillation-finetuning#fine-tuning-llama-3-for-sentiment-analysis)
-- **Stable Diffusion LoRA** — Fine-tuned SD v2 with LoRA for Naruto-style generation, with **77% training time reduction** via multi-GPU. [Details →](./distillation-finetuning#fine-tuning-stable-diffusion-with-lora)
-- **Bike Traffic Prediction** — Graph Attention Networks for urban traffic forecasting; **2nd place** at BTW 2023. [Details →](./distillation-finetuning#predicting-bike-traffic)
-- **Speaker Identification** — Transformer/Conformer encoders achieving **91.8%** accuracy. [Details →](./distillation-finetuning#speaker-identification)
-- **Anime Face Generator** — Diffusion probabilistic model trained on 71k anime faces. [Details →](./distillation-finetuning#anime-face-generator)
 
-[Explore all Distillation & Fine-Tuning projects →](./distillation-finetuning.md)
+[Explore all LLM Distillation & Fine-Tuning projects →](./distillation-finetuning.md)
+
+---
+
+## [Generative AI & Applied Machine Learning](./applied-ml.md)
+
+Developing and fine-tuning generative models for image synthesis, as well as applying advanced deep learning architectures to real-world predictive modeling and audio processing tasks.
+
+<p float="left" align="center">
+  <img src="https://github.com/Wen-ChuangChou/stable-diffusion-fine-tuning/raw/main/images/Hello_Kitty_lora.png" alt="LoRA Output" width="220"/>
+  &nbsp;
+  <img src="https://github.com/Wen-ChuangChou/Anime-face-generator/blob/main/doc/fig/20000iterations.png?raw=true" alt="Anime Face" width="220"/> 
+</p>
+
+**Key projects:**
+- **Stable Diffusion LoRA** — Fine-tuned SD v2 with LoRA for Naruto-style generation, with **77% training time reduction** via multi-GPU. [Details →](./applied-ml#fine-tuning-stable-diffusion-with-lora)
+- **Bike Traffic Prediction** — Graph Attention Networks for urban traffic forecasting; **2nd place** at BTW 2023. [Details →](./applied-ml#predicting-bike-traffic)
+- **Speaker Identification** — Transformer/Conformer encoders achieving **91.8%** accuracy. [Details →](./applied-ml#speaker-identification)
+- **Anime Face Generator** — Diffusion probabilistic model trained on 71k anime faces. [Details →](./applied-ml#anime-face-generator)
+
+[Explore all Generative AI & Applied Machine Learning projects →](./applied-ml.md)
