@@ -1,5 +1,5 @@
 title: Wen-Chuang Chou # your name (or website title) here
-logo: "/images/myphoto_ovl2.jpg?raw=true" # your photo (or logo) here
+logo: "/images/myphoto.jpg?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
   Passionate about AI with roots in theoretical neuroscience,<br> I explore <b>LLMs, AI agent, and human mobility</b>—driven by a vision of <b>accessible, everyday AI for all</b>.
 remote_theme: pages-themes/minimal@v0.2.0
