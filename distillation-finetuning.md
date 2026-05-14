@@ -67,13 +67,30 @@ Using instruction-style prompts and a streamlined training pipeline, the model w
 
 On the MTEB tweet sentiment test set, the fine-tuned model achieved a notable accuracy gain:
 
-<p align="center"><b>Accuracy on MTEB Tweet Sentiment Classification</b>
+<p align="center"><b>Accuracy on MTEB Tweet Sentiment Classification</b></p>
 
-| **Model**                 | **Accuracy (%)** |
-|:-------------------------:|:----------------:|
-| Llama 3.1–8B (zero-shot)  |      63.41        |
-| Llama 3.1–8B (fine-tuned) |    **81.49**      |
-</p>
+<div align="center">
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:center;">Model</th>
+      <th style="text-align:center;">Accuracy (%)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:center;">Llama 3.1–8B (zero-shot)</td>
+      <td style="text-align:center;">63.41</td>
+    </tr>
+    <tr>
+      <td style="text-align:center;">Llama 3.1–8B (fine-tuned)</td>
+      <td style="text-align:center;"><b>81.49</b></td>
+    </tr>
+  </tbody>
+</table>
+
+</div>
 
 <p align="center">
   <img src="https://github.com/Wen-ChuangChou/sentiment_analysis/blob/main/pic/radarplot.png?raw=true" alt="Radar plot showing model performance" width="400"/>
